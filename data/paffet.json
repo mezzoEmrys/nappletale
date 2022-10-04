@@ -1,0 +1,430 @@
+{
+  "paffet": [
+    {
+      "name": "Sprilla",
+      "image": "nt-p-01.jpg",
+      "type": "petal",
+      "mis": []
+    },
+    {
+      "name": "Sumanza",
+      "image": "nt-p-02.jpg",
+      "type": "petal",
+      "mis": []
+    },
+    {
+      "name": "Ottum",
+      "image": "nt-p-03.jpg",
+      "type": "petal",
+      "mis": []
+    },
+    {
+      "name": "Wintuss",
+      "image": "nt-p-04.jpg",
+      "type": "petal",
+      "mis": []
+    },
+    {
+      "name": "Onnichrono",
+      "image": "nt-p-05.jpg",
+      "type": "petal",
+      "mis": []
+    },
+    {
+      "name": "Rivachrono",
+      "image": "nt-p-06.jpg",
+      "type": "petal",
+      "mis": []
+    },
+    {
+      "name": "Healihoo",
+      "image": "nt-p-07.jpg",
+      "type": "healing",
+      "mis": ["physical rest", "activity", "change", "pure"]
+    },
+    {
+      "name": "Pricklit",
+      "image": "nt-p-08.jpg",
+      "type": "attack",
+      "mis": ["wind", "air", "strength", "rigor"]
+    },
+    {
+      "name": "Swooshums",
+      "image": "nt-p-09.jpg",
+      "type": "attack",
+      "mis": ["growth", "play", "air", "rigor"]
+    },
+    {
+      "name": "Watricorn",
+      "image": "nt-p-10.jpg",
+      "type": "attack",
+      "mis": ["wind", "vigor", "water", "strength"]
+    },
+    {
+      "name": "Pyraguin",
+      "image": "nt-p-11.jpg",
+      "type": "attack",
+      "mis": ["vigor", "agility", "fire", "rigor"]
+    },
+    {
+      "name": "Blizzwart",
+      "image": "nt-p-12.jpg",
+      "type": "attack",
+      "mis": ["wind", "strength", "ice", "stillness"]
+    },
+    {
+      "name": "Sparklette",
+      "image": "nt-p-13.jpg",
+      "type": "attack",
+      "mis": ["light", "ball", "pure", "ancient"]
+    },
+    {
+      "name": "Gardina",
+      "image": "nt-p-14.jpg",
+      "type": "assist",
+      "mis": ["idea", "air", "shield", "strength"]
+    },
+    {
+      "name": "Balsamedi",
+      "image": "nt-p-15.jpg",
+      "type": "healing",
+      "mis": ["vigor", "change", "ball", "purification"]
+    },
+    {
+      "name": "Slugini",
+      "image": "nt-p-16.jpg",
+      "type": "assist",
+      "mis": ["wind", "idea", "shield", "time"]
+    },
+    {
+      "name": "Bulbo",
+      "image": "nt-p-17.jpg",
+      "type": "assist",
+      "mis": ["light", "image", "affection", "pure"]
+    },
+    {
+      "name": "Booster",
+      "image": "nt-p-18.jpg",
+      "type": "assist",
+      "mis": ["balance", "change", "rigor", "foundation"]
+    },
+    {
+      "name": "Bumpert",
+      "image": "nt-p-19.jpg",
+      "type": "assist",
+      "mis": ["air", "change", "agility", "foundation"]
+    },
+    {
+      "name": "Bridgino",
+      "image": "nt-p-20.jpg",
+      "type": "assist",
+      "mis": ["growth", "road", "water", "change"]
+    },
+    {
+      "name": "Fluffly",
+      "image": "nt-p-21.jpg",
+      "type": "assist",
+      "mis": ["air", "vigor", "change", "ball"]
+    },
+    {
+      "name": "Mitzel",
+      "image": "nt-p-22.jpg",
+      "type": "assist",
+      "mis": ["strength", "fire", "rigor", "ancient"]
+    },
+    {
+      "name": "Vere De Gull",
+      "image": "nt-p-23.jpg",
+      "type": "assist",
+      "mis": ["physical rest", "balance", "road", "door"]
+    },
+    {
+      "name": "Cheerwhal",
+      "image": "nt-p-24.jpg",
+      "type": "assist",
+      "mis": ["light", "air", "strength", "rigor"]
+    },
+    {
+      "name": "Frazzly",
+      "image": "nt-p-25.jpg",
+      "type": "assist",
+      "mis": ["play", "dreams", "activity", "pure"]
+    },
+    {
+      "name": "Bravello",
+      "image": "nt-p-26.jpg",
+      "type": "assist",
+      "mis": ["physical rest", "affection", "rainbow", "knowledge"]
+    },
+    {
+      "name": "Rahrahzalin",
+      "image": "nt-p-27.jpg",
+      "type": "assist",
+      "mis": ["activity", "mature", "sharp", "pure"]
+    },
+    {
+      "name": "Owendance",
+      "image": "nt-p-28.jpg",
+      "type": "assist",
+      "mis": ["wind", "strength", "stillness", "view"]
+    },
+    {
+      "name": "Street Lights",
+      "image": "nt-p-29.jpg",
+      "type": "furniture",
+      "mis": ["light", "road", "emotional rest", "time"]
+    },
+    {
+      "name": "Guideposts",
+      "image": "nt-p-30.jpg",
+      "type": "furniture",
+      "mis": ["flat", "road", "knowledge", "tradition"]
+    },
+    {
+      "name": "Vending Machine",
+      "image": "nt-p-31.jpg",
+      "type": "furniture",
+      "mis": ["play", "air", "change", "machine"]
+    },
+    {
+      "name": "Weather Vane",
+      "image": "nt-p-32.jpg",
+      "type": "furniture",
+      "mis": ["wind", "rotate", "sharp", "view"]
+    },
+    {
+      "name": "Pump",
+      "image": "nt-p-33.jpg",
+      "type": "furniture",
+      "mis": ["vigor", "water", "harvest", "pure"]
+    },
+    {
+      "name": "Slow Cooker",
+      "image": "nt-p-34.jpg",
+      "type": "furniture",
+      "mis": ["change", "emotional rest", "harvest", "fire"]
+    },
+    {
+      "name": "Fireplace",
+      "image": "nt-p-35.jpg",
+      "type": "furniture",
+      "mis": ["physical rest", "house", "fire", "stillness"]
+    },
+    {
+      "name": "Space Heater",
+      "image": "nt-p-36.jpg",
+      "type": "furniture",
+      "mis": ["wind", "rotate", "fire", "machine"]
+    },
+    {
+      "name": "Chair",
+      "image": "nt-p-37.jpg",
+      "type": "furniture",
+      "mis": ["physical rest", "balance", "house", "foundation"]
+    },
+    {
+      "name": "Door",
+      "image": "nt-p-38.jpg",
+      "type": "furniture",
+      "mis": ["flat", "house", "door", "agility"]
+    },
+    {
+      "name": "Mug",
+      "image": "nt-p-39.jpg",
+      "type": "furniture",
+      "mis": ["physical rest", "water", "emotional rest", "harvest"]
+    },
+    {
+      "name": "Cupboard",
+      "image": "nt-p-40.jpg",
+      "type": "furniture",
+      "mis": ["balance", "house", "transparent", "knowledge"]
+    },
+    {
+      "name": "Table",
+      "image": "nt-p-41.jpg",
+      "type": "furniture",
+      "mis": ["flat", "balance", "house", "stillness"]
+    },
+    {
+      "name": "Bathtub",
+      "image": "nt-p-42.jpg",
+      "type": "furniture",
+      "mis": ["physical rest", "house", "water", "fire"]
+    },
+    {
+      "name": "Fountain",
+      "image": "nt-p-43.jpg",
+      "type": "furniture",
+      "mis": ["water", "rainbow", "change", "emotional rest"]
+    },
+    {
+      "name": "Projector",
+      "image": "nt-p-44.jpg",
+      "type": "furniture",
+      "mis": ["light", "image", "machine", "tradition"]
+    },
+    {
+      "name": "Roof",
+      "image": "nt-p-45.jpg",
+      "type": "furniture",
+      "mis": ["balance", "house", "shield", "rigor"]
+    },
+    {
+      "name": "Cage",
+      "image": "nt-p-46.jpg",
+      "type": "furniture",
+      "mis": ["physical rest", "strength", "ice", "cage"]
+    },
+    {
+      "name": "Harpsicord",
+      "image": "nt-p-47.jpg",
+      "type": "furniture",
+      "mis": ["affection", "emotional rest", "tone", "pure"]
+    },
+    {
+      "name": "Refrigerator",
+      "image": "nt-p-48.jpg",
+      "type": "furniture",
+      "mis": ["fresh", "knowledge", "machine", "ice"]
+    },
+    {
+      "name": "Gramophone",
+      "image": "nt-p-49.jpg",
+      "type": "furniture",
+      "mis": ["affection", "emotional rest", "tone", "machine"]
+    },
+    {
+      "name": "Canopy Bed",
+      "image": "nt-p-50.jpg",
+      "type": "furniture",
+      "mis": ["physical rest", "dreams", "house", "foundation"]
+    },
+    {
+      "name": "Windmill",
+      "image": "nt-p-51.jpg",
+      "type": "furniture",
+      "mis": ["wind", "rotate", "strength", "harvest"]
+    },
+    {
+      "name": "Fan",
+      "image": "nt-p-52.jpg",
+      "type": "furniture",
+      "mis": ["wind", "rotate", "agility", "machine"]
+    },
+    {
+      "name": "Cuckoo Clock",
+      "image": "nt-p-53.jpg",
+      "type": "furniture",
+      "mis": ["rotate", "agility", "machine", "time"]
+    },
+    {
+      "name": "Veranda",
+      "image": "nt-p-54.jpg",
+      "type": "furniture",
+      "mis": ["house", "rainbow", "foundation", "view"]
+    },
+    {
+      "name": "Planter",
+      "image": "nt-p-55.jpg",
+      "type": "furniture",
+      "mis": ["growth", "water", "knowledge", "harvest"]
+    },
+    {
+      "name": "Church Bell",
+      "image": "nt-p-56.jpg",
+      "type": "furniture",
+      "mis": ["air", "sound", "pure", "purification"]
+    },
+    {
+      "name": "Chimney",
+      "image": "nt-p-57.jpg",
+      "type": "furniture",
+      "mis": ["dust", "air", "house", "fire"]
+    },
+    {
+      "name": "Aquarium",
+      "image": "nt-p-58.jpg",
+      "type": "furniture",
+      "mis": ["growth", "fresh", "transparent", "time"]
+    },
+    {
+      "name": "Bagpipes",
+      "image": "nt-p-59.jpg",
+      "type": "furniture",
+      "mis": ["play", "activity", "mature", "tone"]
+    },
+    {
+      "name": "Doormat",
+      "image": "nt-p-60.jpg",
+      "type": "furniture",
+      "mis": ["flat", "dust", "house", "purification"]
+    },
+    {
+      "name": "Signboard",
+      "image": "nt-p-61.jpg",
+      "type": "furniture",
+      "mis": ["flat", "door", "knowledge", "tradition"]
+    },
+    {
+      "name": "Mirror",
+      "image": "nt-p-62.jpg",
+      "type": "furniture",
+      "mis": ["light", "flat", "image", "ice"]
+    },
+    {
+      "name": "Grandfather Clock",
+      "image": "nt-p-63.jpg",
+      "type": "furniture",
+      "mis": ["rotate", "mature", "machine", "time"]
+    },
+    {
+      "name": "Sketchbook",
+      "image": "nt-p-64.jpg",
+      "type": "furniture",
+      "mis": ["image", "affection", "pure", "time"]
+    },
+    {
+      "name": "Romance Novel",
+      "image": "nt-p-65.jpg",
+      "type": "furniture",
+      "mis": ["vigor", "sound", "other world", "tradition"]
+    },
+    {
+      "name": "Trap",
+      "image": "nt-p-66.jpg",
+      "type": "furniture",
+      "mis": ["knowledge", "agility", "rigor", "cage"]
+    },
+    {
+      "name": "Woodpecker",
+      "image": "nt-p-67.jpg",
+      "type": "furniture",
+      "mis": ["rotate", "change", "sharp", "machine"]
+    },
+    {
+      "name": "Automaton",
+      "image": "nt-p-68.jpg",
+      "type": "furniture",
+      "mis": ["light", "play", "image", "machine"]
+    },
+    {
+      "name": "Ice Cream Maker",
+      "image": "nt-p-69.jpg",
+      "type": "furniture",
+      "mis": ["milk", "machine", "ice", "hot ice"]
+    },
+    {
+      "name": "Milk Maker",
+      "image": "nt-p-70.jpg",
+      "type": "furniture",
+      "mis": ["growth", "fresh", "activity", "vigor"]
+    },
+    {
+      "name": "Dream Camera",
+      "image": "nt-p-71.jpg",
+      "type": "furniture",
+      "mis": ["image", "dreams", "mature", "memory"]
+    }
+  ]
+}
