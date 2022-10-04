@@ -3,3 +3,20 @@
 Napple Tale is a cute platforming RPG for the Dreamcast, designed by a team of mostly women, with excellent music by Yoko Kanno.
 
 This node project is meant to be a simple webserver that can be run locally to provide a quick reference to various aspects of the game that are useful for routing in speedruns, races, etc.
+
+Website Goals:
+global search feature, type in a name and it pops up with whatever matches
+paffet panel with quest and MIS info
+MIS panel with item/area info
+quest panel with relevant info
+maps of each area, with indicators for chests, drops, quest npcs
+screenshots of MIS locations for each decode (in item panel?)
+
+/data
+
+paffet.json - contains paffet names and recipes
+item.json - contains decodable items and their MIS
+mis.json - contains all MIS
+area.json - contains each explorable area, along with which items and recipes can be found there (TODO)
+quest.json - contains each quest, with paffets required, requirements, and blockers (TODO)
+
