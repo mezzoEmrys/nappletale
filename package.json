@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lowdb": "^3.0.0"
+  },
+  "name": "nappletale",
+  "version": "1.0.0",
+  "description": "napple tale resources",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mezzoemrys",
+  "license": "ISC"
+}
