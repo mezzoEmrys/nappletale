@@ -259,6 +259,36 @@
       "name": "memory",
       "image": "nt-mis52.jpg",
       "season":"special"
+    },
+    {
+      "name": "spring",
+      "image": "nt-mis53.jpg",
+      "season":"special"
+    },
+    {
+      "name": "summer",
+      "image": "nt-mis54.jpg",
+      "season":"special"
+    },
+    {
+      "name": "autumn",
+      "image": "nt-mis55.jpg",
+      "season":"special"
+    },
+    {
+      "name": "winter",
+      "image": "nt-mis56.jpg",
+      "season":"special"
+    },
+    {
+      "name": "onward time",
+      "image": "nt-mis57.jpg",
+      "season":"special"
+    },
+    {
+      "name": "reverse time",
+      "image": "nt-mis58.jpg",
+      "season":"special"
     }
   ]
 }

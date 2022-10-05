@@ -4,37 +4,37 @@
       "name": "Sprilla",
       "image": "nt-p-01.jpg",
       "type": "petal",
-      "mis": []
+      "mis": ["spring", "spring", "spring", "spring"]
     },
     {
       "name": "Sumanza",
       "image": "nt-p-02.jpg",
       "type": "petal",
-      "mis": []
+      "mis": ["summer", "summer", "summer", "summer"]
     },
     {
       "name": "Ottum",
       "image": "nt-p-03.jpg",
       "type": "petal",
-      "mis": []
+      "mis": ["autumn", "autumn", "autumn", "autumn"]
     },
     {
       "name": "Wintuss",
       "image": "nt-p-04.jpg",
       "type": "petal",
-      "mis": []
+      "mis": ["winter", "winter", "winter", "winter"]
     },
     {
       "name": "Onnichrono",
       "image": "nt-p-05.jpg",
       "type": "petal",
-      "mis": []
+      "mis": ["onward time", "onward time", "onward time", "onward time"]
     },
     {
       "name": "Rivachrono",
       "image": "nt-p-06.jpg",
       "type": "petal",
-      "mis": []
+      "mis": ["reverse time", "reverse time", "reverse time", "reverse time"]
     },
     {
       "name": "Healihoo",
