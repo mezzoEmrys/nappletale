@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url'
 import _ from 'lodash'
 import * as http from 'http'
 import * as fs from 'fs';
+import mime from 'mime-types'
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -48,7 +49,32 @@ function generate_mis_container(item) {
 }
 
 const server = http.createServer((req, res) => {
-    if (req.url == '/') {
+    if (req.url == '/'){
+        res.setHeader("Content-Type", "text/html");
+        res.writeHead(200);
+        res.end(fs.readFileSync("index.html"));
+    }
+    else if (req.url == '/mis_test') {
+        res.setHeader("Content-Type", "text/html");
+        res.writeHead(200);
+        res.write("<html><head><style>");
+        res.write("img.big { width:64px;}")
+        res.write("</style></head><body>")
+        mis.forEach(el => res.write(image(el)));
+        res.write("</body></html>")
+        res.end();
+    }
+    else if (req.url == '/paffet_test') {
+        res.setHeader("Content-Type", "text/html");
+        res.writeHead(200);
+        res.write("<html><head><style>");
+        res.write("img.big { width:64px;}")
+        res.write("</style></head><body>")
+        paffet.forEach(el => res.write(generate_mis_container(el)));
+        res.write("</body></html>")
+        res.end();
+    }
+    else if (req.url == '/item_test') {
         res.setHeader("Content-Type", "text/html");
         res.writeHead(200);
         res.write("<html><head><style>");
@@ -71,7 +97,7 @@ const server = http.createServer((req, res) => {
     }
     else if (req.url.startsWith("/images/")) {
         if(fs.existsSync("."+req.url)){
-            res.setHeader("Content-Type", "image/jpeg");
+            res.setHeader("Content-Type", mime.lookup("."+req.url));
             res.writeHead(200);
             res.end(fs.readFileSync("."+req.url));
         } else {
@@ -79,7 +105,19 @@ const server = http.createServer((req, res) => {
             res.end();
         }
     }
-    else {
+    else if (req.url.startsWith("/includes/")) {
+        if(fs.existsSync("."+req.url)){
+            res.setHeader("Content-Type", mime.lookup("."+req.url));
+            res.writeHead(200);
+            res.end(fs.readFileSync("."+req.url));
+        } else {
+            res.writeHead(404);
+            res.end();
+        }
+    }
+
+    //fallthrough case, make sure to use res.end()!!
+    if(!res.writableEnded){
         console.log(req.url);
         res.writeHead(404);
         res.end();

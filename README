@@ -20,3 +20,16 @@ mis.json - contains all MIS
 area.json - contains each explorable area, along with which items and recipes can be found there (TODO)
 quest.json - contains each quest, with paffets required, requirements, and blockers (TODO)
 
+
+
+General Napple Tale Goals:
+Napple Tale Randomizer - Maybe we randomize paffet MIS? Item MIS? Enemy Drops? 
+Fix Porch's Memo in the Translation Patch - Turns out this could be useful???
+Bingo config by rules - if you say "no quests more than x deep", generates bingo config accordingly, also can turn on/off gatcha, etc.
+No Dove Clock / More Dove Clock - ROM patches to either remove dove clock or add it to more scenes (low priority)
+
+Randomizer Notes:
+MIS pool for paffets, items
+Enemizer
+fucked up quest prerequisites (eg. winter petal for the wind to work in Wild Wind)
+More Dove Clock Randomizer setting - deliver a pox unto your house

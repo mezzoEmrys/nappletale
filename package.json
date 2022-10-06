@@ -2,7 +2,8 @@
   "type": "module",
   "dependencies": {
     "lodash": "^4.17.21",
-    "lowdb": "^3.0.0"
+    "lowdb": "^3.0.0",
+    "mime-types": "^2.1.35"
   },
   "name": "nappletale",
   "version": "1.0.0",
