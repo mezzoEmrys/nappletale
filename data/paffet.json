@@ -4,169 +4,225 @@
       "name": "Sprilla",
       "image": "nt-p-01.jpg",
       "type": "petal",
-      "mis": ["spring", "spring", "spring", "spring"]
+      "mis": ["spring", "spring", "spring", "spring"],
+      "desc": "put in the spring season hole",
+      "activation count": 1
     },
     {
       "name": "Sumanza",
       "image": "nt-p-02.jpg",
       "type": "petal",
-      "mis": ["summer", "summer", "summer", "summer"]
+      "mis": ["summer", "summer", "summer", "summer"],
+      "desc": "put in the summer season hole",
+      "activation count": 1
     },
     {
       "name": "Ottum",
       "image": "nt-p-03.jpg",
       "type": "petal",
-      "mis": ["autumn", "autumn", "autumn", "autumn"]
+      "mis": ["autumn", "autumn", "autumn", "autumn"],
+      "desc": "put in the autumn season hole",
+      "activation count": 1
     },
     {
       "name": "Wintuss",
       "image": "nt-p-04.jpg",
       "type": "petal",
-      "mis": ["winter", "winter", "winter", "winter"]
+      "mis": ["winter", "winter", "winter", "winter"],
+      "desc": "put in the winter season hole",
+      "activation count": 1
     },
     {
       "name": "Onnichrono",
       "image": "nt-p-05.jpg",
       "type": "petal",
-      "mis": ["onward time", "onward time", "onward time", "onward time"]
+      "mis": ["onward time", "onward time", "onward time", "onward time"],
+      "desc": "go to the special stage in the Transit Center",
+      "activation count": 8
     },
     {
       "name": "Rivachrono",
       "image": "nt-p-06.jpg",
       "type": "petal",
-      "mis": ["reverse time", "reverse time", "reverse time", "reverse time"]
+      "mis": ["reverse time", "reverse time", "reverse time", "reverse time"],
+      "desc": "go to the boss battle stage in the Transit Center",
+      "activation count": 8
     },
     {
       "name": "Healihoo",
       "image": "nt-p-07.jpg",
       "type": "healing",
-      "mis": ["physical rest", "activity", "change", "pure"]
+      "mis": ["physical rest", "activity", "change", "pure"],
+      "desc": "Stamina recovery (1 napple fruit)",
+      "activation count": 4
     },
     {
       "name": "Pricklit",
       "image": "nt-p-08.jpg",
       "type": "attack",
-      "mis": ["wind", "air", "strength", "rigor"]
+      "mis": ["wind", "air", "strength", "rigor"],
+      "desc": "Wind Attack",
+      "activation count": 4
     },
     {
       "name": "Swooshums",
       "image": "nt-p-09.jpg",
       "type": "attack",
-      "mis": ["growth", "play", "air", "rigor"]
+      "mis": ["growth", "play", "air", "rigor"],
+      "desc": "Tornado Attack",
+      "activation count": 4
     },
     {
       "name": "Watricorn",
       "image": "nt-p-10.jpg",
       "type": "attack",
-      "mis": ["wind", "vigor", "water", "strength"]
+      "mis": ["wind", "vigor", "water", "strength"],
+      "desc": "Water Attack",
+      "activation count": 4
     },
     {
       "name": "Pyraguin",
       "image": "nt-p-11.jpg",
       "type": "attack",
-      "mis": ["vigor", "agility", "fire", "rigor"]
+      "mis": ["vigor", "agility", "fire", "rigor"],
+      "desc": "Fire Attack",
+      "activation count": 4
     },
     {
       "name": "Blizzwart",
       "image": "nt-p-12.jpg",
       "type": "attack",
-      "mis": ["wind", "strength", "ice", "stillness"]
+      "mis": ["wind", "strength", "ice", "stillness"],
+      "desc": "Ice Attack",
+      "activation count": 3
     },
     {
       "name": "Sparklette",
       "image": "nt-p-13.jpg",
       "type": "attack",
-      "mis": ["light", "ball", "pure", "ancient"]
+      "mis": ["light", "ball", "pure", "ancient"],
+      "desc": "Lightning Attack",
+      "activation count": 3
     },
     {
       "name": "Gardina",
       "image": "nt-p-14.jpg",
       "type": "assist",
-      "mis": ["idea", "air", "shield", "strength"]
+      "mis": ["idea", "air", "shield", "strength"],
+      "desc": "Become a shield",
+      "activation count": 3
     },
     {
       "name": "Balsamedi",
       "image": "nt-p-15.jpg",
       "type": "healing",
-      "mis": ["vigor", "change", "ball", "purification"]
+      "mis": ["vigor", "change", "ball", "purification"],
+      "desc": "Full heal",
+      "activation count": 1
     },
     {
       "name": "Slugini",
       "image": "nt-p-16.jpg",
       "type": "assist",
-      "mis": ["wind", "idea", "shield", "time"]
+      "mis": ["wind", "idea", "shield", "time"],
+      "desc": "Slow enemies",
+      "activation count": 4
     },
     {
       "name": "Bulbo",
       "image": "nt-p-17.jpg",
       "type": "assist",
-      "mis": ["light", "image", "affection", "pure"]
+      "mis": ["light", "image", "affection", "pure"],
+      "desc": "Light up darkness",
+      "activation count": 5
     },
     {
       "name": "Booster",
       "image": "nt-p-18.jpg",
       "type": "assist",
-      "mis": ["balance", "change", "rigor", "foundation"]
+      "mis": ["balance", "change", "rigor", "foundation"],
+      "desc": "Becomes a step stoop",
+      "activation count": 6
     },
     {
       "name": "Bumpert",
       "image": "nt-p-19.jpg",
       "type": "assist",
-      "mis": ["air", "change", "agility", "foundation"]
+      "mis": ["air", "change", "agility", "foundation"],
+      "desc": "Becomes a trampoline",
+      "activation count": 6
     },
     {
       "name": "Bridgino",
       "image": "nt-p-20.jpg",
       "type": "assist",
-      "mis": ["growth", "road", "water", "change"]
+      "mis": ["growth", "road", "water", "change"],
+      "desc": "Becomes a bridge",
+      "activation count": 6
     },
     {
       "name": "Fluffly",
       "image": "nt-p-21.jpg",
       "type": "assist",
-      "mis": ["air", "vigor", "change", "ball"]
+      "mis": ["air", "vigor", "change", "ball"],
+      "desc": "Becomes a balloon that floats you forward",
+      "activation count": 4
     },
     {
       "name": "Mitzel",
       "image": "nt-p-22.jpg",
       "type": "assist",
-      "mis": ["strength", "fire", "rigor", "ancient"]
+      "mis": ["strength", "fire", "rigor", "ancient"],
+      "desc": "Becomes a missle to destroy enemies and obstacles",
+      "activation count": 4
     },
     {
       "name": "Vere De Gull",
       "image": "nt-p-23.jpg",
       "type": "assist",
-      "mis": ["physical rest", "balance", "road", "door"]
+      "mis": ["physical rest", "balance", "road", "door"],
+      "desc": "Creates a door back to Napple Town",
+      "activation count": 2
     },
     {
       "name": "Cheerwhal",
       "image": "nt-p-24.jpg",
       "type": "assist",
-      "mis": ["light", "air", "strength", "rigor"]
+      "mis": ["light", "air", "strength", "rigor"],
+      "desc": "Double the score",
+      "activation count": 5
     },
     {
       "name": "Frazzly",
       "image": "nt-p-25.jpg",
       "type": "assist",
-      "mis": ["play", "dreams", "activity", "pure"]
+      "mis": ["play", "dreams", "activity", "pure"],
+      "desc": "Coin chain time doubled",
+      "activation count": 5
     },
     {
       "name": "Bravello",
       "image": "nt-p-26.jpg",
       "type": "assist",
-      "mis": ["physical rest", "affection", "rainbow", "knowledge"]
+      "mis": ["physical rest", "affection", "rainbow", "knowledge"],
+      "desc": "Stop time",
+      "activation count": 5
     },
     {
       "name": "Rahrahzalin",
       "image": "nt-p-27.jpg",
       "type": "assist",
-      "mis": ["activity", "mature", "sharp", "pure"]
+      "mis": ["activity", "mature", "sharp", "pure"],
+      "desc": "Adds 500 points, drops a random item [heal, paffet recovery, bomb]",
+      "activation count": 7
     },
     {
       "name": "Owendance",
       "image": "nt-p-28.jpg",
       "type": "assist",
-      "mis": ["wind", "strength", "stillness", "view"]
+      "mis": ["wind", "strength", "stillness", "view"],
+      "desc": "500 points when damaged, prevents being dragged",
+      "activation count": 1
     },
     {
       "name": "Street Lights",

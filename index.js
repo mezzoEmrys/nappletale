@@ -54,7 +54,7 @@ const server = http.createServer((req, res) => {
         res.write("<html><head><style>");
         res.write("img.big { width:64px;}")
         res.write("</style></head><body>")
-        paffet.forEach(el => res.write(generate_mis_container(el)));
+        item.forEach(el => res.write(generate_mis_container(el)));
         res.write("</body></html>")
         res.end();
     }

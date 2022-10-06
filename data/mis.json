@@ -1,6 +1,7 @@
 {
   "mis": [
     {
+      "display_name_en": "Wind",
       "name": "wind",
       "image": "nt-mis01.jpg",
       "season":"spring"
