@@ -1,4 +1,13 @@
 /* standard values */
 .header {
   background-color: #AAF0C1;
+}
+
+.logo {
+  height: 3em;
+}
+
+.child-spacing li {
+  margin-left: 1em;
+  margin-right: 1em;
 }/*# sourceMappingURL=main.css.map */

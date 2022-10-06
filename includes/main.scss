@@ -4,3 +4,13 @@ $headercolor: #AAF0C1;
 .header {
     background-color:$headercolor;
 }
+
+.logo {
+    height: 3em;
+}
+
+$headerspacing: 1em;
+.child-spacing li {
+    margin-left: $headerspacing;
+    margin-right: $headerspacing;
+}
