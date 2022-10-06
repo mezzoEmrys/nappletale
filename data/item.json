@@ -151,7 +151,7 @@
             "image":"nt-i30.jpg"
         },
         {
-            "name":"sundail",
+            "name":"sundial",
             "mis":["time", "light","change"],
             "image":"nt-i31.jpg"
         },
@@ -186,7 +186,7 @@
             "image":"nt-i37.jpg"
         },
         {
-            "name":"dollhouse",
+            "name":"log cabin",
             "mis":["house", "affection", "play"],
             "image":"nt-i38.jpg"
         },
