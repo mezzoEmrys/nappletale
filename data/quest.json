@@ -204,6 +204,9 @@
             "name":"A fireplace?"
         },
         {
+            "name":"A space heater?"
+        },
+        {
             "name":"A chair?"
         },
         {
@@ -253,6 +256,57 @@
         },
         {
             "name":"A veranda?"
+        },
+        {
+            "name":"A planter?"
+        },
+        {
+            "name":"A church bell?"
+        },
+        {
+            "name":"A chimney?"
+        },
+        {
+            "name":"An aquarium?"
+        },
+        {
+            "name":"Bagpipes?"
+        },
+        {
+            "name":"A doormat?"
+        },
+        {
+            "name":"A signboard?"
+        },
+        {
+            "name":"A mirror?"
+        },
+        {
+            "name":"A grandfather clock?"
+        },
+        {
+            "name":"A sketchbook?"
+        },
+        {
+            "name":"A romance novel?"
+        },
+        {
+            "name":"A trap?"
+        },
+        {
+            "name":"A woodpecker?"
+        },
+        {
+            "name":"An automaton?"
+        },
+        {
+            "name":"An ice cream maker?"
+        },
+        {
+            "name":"A milk maker?"
+        },
+        {
+            "name":"A dream camera?"
         }
     ]
 }
