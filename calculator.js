@@ -2,6 +2,7 @@ import { join, dirname } from 'path'
 import { Low, JSONFile } from 'lowdb'
 import { fileURLToPath } from 'url'
 import _ from 'lodash'
+import util from 'util'
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -38,5 +39,20 @@ function getAreas(item){
     return _.filter(area, area => area.items.includes(item.name))
 }
 
-console.log(_.chain(getMis(paffetByName("Healihoo"))).map(sourceItems).map(items => _.chain(items).flatMap(getAreas).map(a => a.name).uniq().value()).value());
+function areasForItem(item){
+    return _.chain(getAreas(item))
+        .map(a => a.name)
+        .uniq()
+        .value();
+}
+
+console.log(util.inspect(_.chain(getMis(paffetByName(process.argv[2] ?? "Healihoo")))
+    .map(mis => {return {
+        "mis":mis.name,
+        "items":sourceItems(mis)
+            .map(item => {return {
+                "item":item.name, 
+                "areas":areasForItem(item)
+        }})}})
+    .value(), {showHidden: false, depth: null, colors: true}));
 //.flatMap(getAreas).map(a => a.name).uniq()

@@ -52,7 +52,7 @@
             "name":"Secret Garden",
             "season": "autumn",
             "chests": [],
-            "items": ["electric circuit", "wine", "sundial", "crank"]
+            "items": ["electric circuit", "antique", "wine", "sundial", "crank", "farm equipment"]
         },
         {
             "name":"Fjordland",

@@ -14,3 +14,12 @@ $headerspacing: 1em;
     margin-left: $headerspacing;
     margin-right: $headerspacing;
 }
+
+body {
+    background-image: url("/images/web-assets/stylized_bg.png");
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: 120vw;
+    background-position: center;
+
+}

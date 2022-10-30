@@ -1,22 +1,25 @@
 {
   "mis": [
     {
-      "display_name_en": "Wind",
+      "display_name_en": "Breeze",
       "name": "wind",
       "image": "nt-mis01.jpg",
       "season":"spring"
     },
     {
+      "display_name_en": "Rest",
       "name": "physical rest",
       "image": "nt-mis02.jpg",
       "season":"spring"
     },
     {
+      "display_name_en": "Light",
       "name": "light",
       "image": "nt-mis03.jpg",
       "season":"spring"
     },
     {
+      "display_name_en": "Surface",
       "name": "flat",
       "image": "nt-mis04.jpg",
       "season":"spring"
@@ -27,6 +30,7 @@
       "season":"spring"
     },
     {
+      "display_name_en": "Play/Amsuement",
       "name": "play",
       "image": "nt-mis06.jpg",
       "season":"spring"
@@ -37,11 +41,13 @@
       "season":"spring"
     },
     {
+      "display_name_en": "Stability",
       "name": "balance",
       "image": "nt-mis08.jpg",
       "season":"spring"
     },
     {
+      "display_name_en": "Dream/Fantasy/Memory",
       "name": "dreams",
       "image": "nt-mis09.jpg",
       "season":"spring"
@@ -57,16 +63,19 @@
       "season":"spring"
     },
     {
+      "display_name_en": "Dust/Particles",
       "name": "dust",
       "image": "nt-mis12.jpg",
       "season":"spring"
     },
     {
+      "display_name_en": "Atmosphere",
       "name": "air",
       "image": "nt-mis13.jpg",
       "season":"summer"
     },
     {
+      "display_name_en": "Vitality",
       "name": "activity",
       "image": "nt-mis14.jpg",
       "season":"summer"
@@ -77,31 +86,37 @@
       "season":"summer"
     },
     {
+      "display_name_en": "House/Building",
       "name": "house",
       "image": "nt-mis16.jpg",
       "season":"summer"
     },
     {
+      "display_name_en": "Passion",
       "name": "affection",
       "image": "nt-mis17.jpg",
       "season":"summer"
     },
     {
+      "display_name_en": "Prosperity/Momentum",
       "name": "vigor",
       "image": "nt-mis18.jpg",
       "season":"summer"
     },
     {
+      "display_name_en": "Water",
       "name": "water",
       "image": "nt-mis19.jpg",
       "season":"summer"
     },
     {
+      "display_name_en": "Rotation",
       "name": "rotate",
       "image": "nt-mis20.jpg",
       "season":"summer"
     },
     {
+      "display_name_en": "Rainbow",
       "name": "rainbow",
       "image": "nt-mis21.jpg",
       "season":"summer"
@@ -122,16 +137,19 @@
       "season":"summer"
     },
     {
+      "display_name_en": "Variation",
       "name": "change",
       "image": "nt-mis25.jpg",
       "season":"autumn"
     },
     {
+      "display_name_en": "Bodily Strength",
       "name": "strength",
       "image": "nt-mis26.jpg",
       "season":"autumn"
     },
     {
+      "display_name_en": "Emotional Rest",
       "name": "emotional rest",
       "image": "nt-mis27.jpg",
       "season":"autumn"
@@ -142,11 +160,13 @@
       "season":"autumn"
     },
     {
+      "display_name_en": "Harvest",
       "name": "harvest",
       "image": "nt-mis29.jpg",
       "season":"autumn"
     },
     {
+      "display_name_en": "Dexterity/Agility",
       "name": "agility",
       "image": "nt-mis30.jpg",
       "season":"autumn"
@@ -162,6 +182,7 @@
       "season":"autumn"
     },
     {
+      "display_name_en": "Tune",
       "name": "tone",
       "image": "nt-mis33.jpg",
       "season":"autumn"
@@ -177,6 +198,7 @@
       "season":"autumn"
     },
     {
+      "display_name_en": "Song",
       "name": "sound",
       "image": "nt-mis36.jpg",
       "season":"autumn"
@@ -187,21 +209,24 @@
       "season":"winter"
     },
     {
-      "name": "time",
+      "display_name_en": "Purity",
+      "name": "pure",
       "image": "nt-mis38.jpg",
       "season":"winter"
     },
     {
-      "name": "pure",
+      "name": "machine",
       "image": "nt-mis39.jpg",
       "season":"winter"
     },
     {
-      "name": "machine",
+      "display_name_en": "Flowing Time",
+      "name": "time",
       "image": "nt-mis40.jpg",
       "season":"winter"
     },
     {
+      "display_name_en": "Ice/Chill",
       "name": "ice",
       "image": "nt-mis41.jpg",
       "season":"winter"
