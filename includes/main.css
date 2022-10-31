@@ -18,4 +18,19 @@ body {
   background-repeat: no-repeat;
   background-size: 120vw;
   background-position: center;
+}
+
+.info-col {
+  flex-grow: 1;
+}
+
+.side-col {
+  width: 20vw;
+  min-width: 15em;
+  background-image: url("grit.png");
+  background-color: #a85a40;
+}
+
+.nav-icons {
+  float: right;
 }/*# sourceMappingURL=main.css.map */

@@ -1,106 +1,151 @@
 {
     "to-do":[
         {
-            "name":"Missing Spring"
+            "name":"Missing Spring",
+            "line":"Spring Petal"
         },
         {
-            "name":"Opening Ceremony"
+            "name":"Opening Ceremony",
+            "line":"Spring Petal",
+            "prereqs": {"quests":["Missing Spring"]}
         },
         {
-            "name":"Do tell, Mele!"
+            "name":"Do tell, Mele!",
+            "line":"Spring Petal",
+            "prereqs": {"quests":["Opening Ceremony"]}
         },
         {
-            "name":"Finding Geiger"
+            "name":"Finding Geiger",
+            "line":"Spring Petal",
+            "prereqs": {"quests":["Do tell, Mele!"]}
         },
         {
-            "name":"Geiger's Tools"
+            "name":"Geiger's Tools",
+            "line":"Spring Petal",
+            "prereqs": {"quests":["Finding Geiger"]}
         },
         {
-            "name":"Fix the pianola!"
+            "name":"Fix the pianola!",
+            "line":"Spring Petal",
+            "prereqs": {"quests":["Geiger's Tools"]}
         },
         {
-            "name":"Thank you, Geiger"
+            "name":"Thank you, Geiger",
+            "line":"Spring Petal",
+            "prereqs": {"quests":["Fix the pianola!"]}
         },
         {
-            "name":"Geiger's notes"
+            "name":"Geiger's notes",
+            "line":"Spring Petal",
+            "prereqs": {"quests":["Thank you, Geiger"]}
         },
         {
-            "name":"A Familiar House"
+            "name":"A Familiar House",
+            "line":"Onward Time Petal"
         },
         {
-            "name":"Spring Alice's Mood"
+            "name":"Spring Alice's Mood",
+            "line":"Onward Time Petal"
         },
         {
-            "name":"Blanket Collection"
+            "name":"Blanket Collection",
+            "line":"Onward Time Petal"
         },
         {
-            "name":"A Present for Alice"
+            "name":"A Present for Alice",
+            "line":"Onward Time Petal"
         },
         {
-            "name":"The Sleepover"
+            "name":"The Sleepover",
+            "line":"Onward Time Petal"
         },
         {
-            "name":"Spring Alice's Petal"
+            "name":"Spring Alice's Petal",
+            "line":"Onward Time Petal"
         },
         {
-            "name":"Searching for Summer"
+            "name":"Searching for Summer",
+            "line":"Summer Petal"
         },
         {
-            "name":"The Cattle Bar Crisis"
+            "name":"The Cattle Bar Crisis",
+            "line":"Summer Petal"
         },
         {
-            "name":"The Mansion in Red & Gold"
+            "name":"The Mansion in Red & Gold",
+            "line":"Autumn Petal"
         },
         {
-            "name":"Bomba Trent Hazard!"
+            "name":"Bomba Trent Hazard!",
+            "line":"Autumn Petal"
         },
         {
-            "name":"Littlemoney's Plea"
+            "name":"Littlemoney's Plea",
+            "line":"Autumn Petal"
         },
         {
-            "name":"Littlemoney's Plea Pt 2"
+            "name":"Littlemoney's Plea Pt 2",
+            "line":"Autumn Petal"
         },
         {
-            "name":"The Solemn Old Lady"
+            "name":"The Solemn Old Lady",
+            "line":"Reverse Time Petal"
         },
         {
-            "name":"Cecille's gone!"
+            "name":"Cecille's gone!",
+            "line":"Reverse Time Petal"
         },
         {
-            "name":"Cecille's mirror"
+            "name":"Cecille's mirror",
+            "line":"Reverse Time Petal"
         },
         {
-            "name":"The woman's gone?!"
+            "name":"The woman's gone?!",
+            "line":"Reverse Time Petal"
         },
         {
-            "name":"Phantom Stew"
+            "name":"Phantom Stew",
+            "line":"Winter Petal"
         },
         {
-            "name":"Cross the corridor!"
+            "name":"Cross the corridor!",
+            "line":"Winter Petal"
         },
         {
-            "name":"Let's make ice cream!"
+            "name":"Let's make ice cream!",
+            "line":"Winter Petal"
         },
         {
-            "name":"All of my petals!"
+            "name":"All of my petals!",
+            "line":"Clown Apocalypse",
+            "prereqs":{ "petal_count":6 }
         },
         {
-            "name":"Follow Pierrot!"
+            "name":"Follow Pierrot!",
+            "line":"Clown Apocalypse"
         },
         {
-            "name":"The Dream Camera"
+            "name":"The Dream Camera",
+            "line":"Clown Apocalypse"
         },
         {
-            "name":"Dreaming of Napple Town"
+            "name":"Dreaming of Napple Town",
+            "line":"Clown Apocalypse"
         },
         {
-            "name":"The Hunt for Pierrot"
+            "name":"The Hunt for Pierrot",
+            "line":"Clown Apocalypse"
         },
         {
-            "name":"Back to Real World!"
+            "name":"Back to Real World!",
+            "line":"Clown Apocalypse"
         },
         {
-            "name":"Gomes' Petal"
+            "name":"Gomes' Petal",
+            "prereqs": {
+                "quests" : ["Spring Petal"]
+            },
+            "blockers":"Booster, Come Home!"
         },
         {
             "name":"Back to Gomes"
@@ -124,13 +169,16 @@
             "name":"Ciel's Present"
         },
         {
-            "name":"Barnes' Deed"
+            "name":"Barnes' Deed",
+            "line":"Barnes' House"
         },
         {
-            "name":"The Busy Banker"
+            "name":"The Busy Banker",
+            "line":"Barnes' House"
         },
         {
-            "name":"Break the Safe!"
+            "name":"Break the Safe!",
+            "line":"Barnes' House"
         },
         {
             "name":"Let's Make Music!"
@@ -186,22 +234,37 @@
     ],
     "requests":[
         {
-            "name":"Street lights?"
+            "name":"Street lights?",
+            "prereqs":{
+                "petal_count" : 1
+            },
+            "paffet":"Street Lights"
         },
         {
-            "name":"Guideposts?"
+            "name":"Guideposts?",
+            "prereqs":{
+                "quests": ["Street lights?", "A pump?"]
+            },
+            "paffet":"Guideposts"
         },
         {
-            "name":"A weather vane?"
+            "name":"A weather vane?",
+            "paffet":"Weather Vane"
         },
         {
-            "name":"A pump?"
+            "name":"A pump?",
+            "prereqs":{
+                "petal_count" : 2
+            }
         },
         {
             "name":"A slow cooker?"
         },
         {
-            "name":"A fireplace?"
+            "name":"A fireplace?",
+            "prereqs":{
+                "quests":["Barnes' House"]
+            }
         },
         {
             "name":"A space heater?"

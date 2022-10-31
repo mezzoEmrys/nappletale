@@ -12,6 +12,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const mis_db = new Low(new JSONFile(join(__dirname, 'data/mis.json')))
 const item_db = new Low(new JSONFile(join(__dirname, 'data/item.json')))
 const paffet_db = new Low(new JSONFile(join(__dirname, 'data/paffet.json')))
+const quest_db = new Low(new JSONFile(join(__dirname, 'data/quest.json')))
+const area_db = new Low(new JSONFile(join(__dirname, 'data/area.json')))
 
 // Read data from JSON file, this will set db.data content
 await mis_db.read()
