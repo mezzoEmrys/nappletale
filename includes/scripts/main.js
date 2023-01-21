@@ -31,7 +31,7 @@ function referenceMIS(misName){
     var el = $("#mis-ref-template").clone();
     el.removeAttr("id");
     el.removeClass("hidden-template");
-    $(".mis-image", el).attr("src", "/images/"+mis.image);
+    $(".mis-image", el).attr("src", "images/"+mis.image);
     return el;
 }
 
@@ -40,7 +40,7 @@ function referencePaffet(paffetName){
     var el = $("#paffet-ref-template").clone();
     el.removeAttr("id");
     el.removeClass("hidden-template");
-    $(".paffet-image", el).attr("src", "/images/"+paffet.image);
+    $(".paffet-image", el).attr("src", "images/"+paffet.image);
     return el;
 }
 
@@ -49,7 +49,7 @@ function referenceItem(itemName){
     var el = $("#item-ref-template").clone();
     el.removeAttr("id");
     el.removeClass("hidden-template");
-    $(".item-image", el).attr("src", "/images/"+item.image);
+    $(".item-image", el).attr("src", "images/"+item.image);
     return el;
 }
 
@@ -59,7 +59,7 @@ function loadPaffetTab(){
         el.attr("id", "paffet-"+paffet.name);
         el.removeClass("hidden-template");
         $(".paffet-name", el).html(paffet.name);
-        $(".paffet-image", el).attr("src", "/images/"+paffet.image);
+        $(".paffet-image", el).attr("src", "images/"+paffet.image);
         paffet.mis.forEach(misName => {
             $(".paffet-recipe", el).append(referenceMIS(misName));
         })
@@ -77,7 +77,7 @@ function loadMISTab(){
         } else {
             $(".mis-name", el).html(mis.name);
         }
-        $(".mis-image", el).attr("src", "/images/"+mis.image);
+        $(".mis-image", el).attr("src", "images/"+mis.image);
         data.item
             .filter(i => i.mis.includes(mis.name))
             .forEach(item => {
