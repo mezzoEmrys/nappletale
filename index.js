@@ -50,14 +50,16 @@ function generate_mis_container(item) {
     return out;
 }
 
+const ct_HTML = "text/html; charset=utf-8";
+
 const server = http.createServer((req, res) => {
     if (req.url == '/'){
-        res.setHeader("Content-Type", "text/html");
+        res.setHeader("Content-Type", ct_HTML);
         res.writeHead(200);
         res.end(fs.readFileSync("index.html"));
     }
     else if (req.url == '/mis_test') {
-        res.setHeader("Content-Type", "text/html");
+        res.setHeader("Content-Type", ct_HTML);
         res.writeHead(200);
         res.write("<html><head><style>");
         res.write("img.big { width:64px;}")
@@ -67,7 +69,7 @@ const server = http.createServer((req, res) => {
         res.end();
     }
     else if (req.url == '/paffet_test') {
-        res.setHeader("Content-Type", "text/html");
+        res.setHeader("Content-Type", ct_HTML);
         res.writeHead(200);
         res.write("<html><head><style>");
         res.write("img.big { width:64px;}")
@@ -77,7 +79,7 @@ const server = http.createServer((req, res) => {
         res.end();
     }
     else if (req.url == '/item_test') {
-        res.setHeader("Content-Type", "text/html");
+        res.setHeader("Content-Type", ct_HTML);
         res.writeHead(200);
         res.write("<html><head><style>");
         res.write("img.big { width:64px;}")
@@ -88,7 +90,7 @@ const server = http.createServer((req, res) => {
     }
     else if (req.url.startsWith("/i/")) {
         var id = req.url.substring(3);
-        res.setHeader("Content-Type", "text/html");
+        res.setHeader("Content-Type", ct_HTML);
         res.writeHead(200);
         res.write("<html><head><style>");
         res.write("img.big { width:64px;}")
@@ -108,6 +110,16 @@ const server = http.createServer((req, res) => {
         }
     }
     else if (req.url.startsWith("/includes/")) {
+        if(fs.existsSync("."+req.url)){
+            res.setHeader("Content-Type", mime.lookup("."+req.url));
+            res.writeHead(200);
+            res.end(fs.readFileSync("."+req.url));
+        } else {
+            res.writeHead(404);
+            res.end();
+        }
+    }
+    else if (req.url.startsWith("/data/")) {
         if(fs.existsSync("."+req.url)){
             res.setHeader("Content-Type", mime.lookup("."+req.url));
             res.writeHead(200);

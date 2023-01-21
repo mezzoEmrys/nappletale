@@ -14,10 +14,9 @@
   src="https://code.jquery.com/jquery-3.6.1.min.js"
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
   crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet">
-  <link href="/includes/main.css"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/includes/main.css" rel="stylesheet">
+  <link href="/includes/templates.css" rel="stylesheet">
   <script src="/includes/scripts/main.js"></script>
 </head>
 <title>Napple Tale Resources</title>
@@ -47,7 +46,7 @@
       </div>
     </div>
   </header>
-  <div class="d-flex flex-grow-1">
+  <div class="d-flex flex-grow-1 height-binding">
     <div class="listing-col">
       <ul class="nav nav-tabs" id="encyclo" role="tablist">
         <li class="nav-item" role="presentation">
@@ -90,7 +89,14 @@
       </ul>
       <div class="tab-content flex-grow-1" id="myTabContent">
         <div class="listing-pane tab-pane fade show active" id="paffet-tab-pane" role="tabpanel" aria-labelledby="paffet-tab" tabindex="0"> 
-          paffet 
+          <div class="paffet-entry hidden-template" id="paffet-template">
+            <img class="paffet-image">
+            <span class="paffet-name"></span>
+            <span class="paffet-details"></span>
+            <div class="paffet-recipe">
+
+            </div>
+          </div>
         </div>
         <div class="listing-pane tab-pane fade" id="mis-tab-pane" role="tabpanel" aria-labelledby="mis-tab" tabindex="0">
           mis
@@ -106,12 +112,20 @@
         </div>
       </div>
     </div>
-    <div class="data-col">
-      <div class="data-tex">
+    <div class="journal-expander-col">
+        <div class="textured">
+            <button type="button" class="journal-expander">▶</button>
+        </div>
+    </div>
+    <div class="journal-col">
+      <div class="textured data">
         <h3>Journal</h3>
       </div>
     </div>
   </div>
+</div>
+<div class="hidden-template mis-reference" id="mis-ref-template">
+  <img class="mis-image">
 </div>
 </body>
 </html>

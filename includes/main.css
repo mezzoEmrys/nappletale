@@ -26,9 +26,14 @@ body {
   flex-direction: column;
 }
 
-.data-col {
-  width: 20vw;
-  min-width: 15em;
+.journal-col {
+  width: 35vw;
+  min-width: 30em;
+  background-color: #ffcdbc;
+  display: flex;
+}
+
+.journal-expander-col {
   background-color: #ffcdbc;
   display: flex;
 }
@@ -37,10 +42,13 @@ body {
   padding: 0.5em;
 }
 
-.data-tex {
+.textured {
   background-image: url("/images/web-assets/grit.png");
   opacity: 0.8;
   flex-grow: 1;
+}
+
+.data {
   padding: 0.5em;
 }
 
@@ -67,4 +75,25 @@ button.nav-link.active {
 
 .page-wrapper {
   height: 100vh;
+  max-height: 100vh;
+}
+
+.journal-expander {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+#myTabContent {
+  overflow-y: scroll;
+}
+
+.height-binding {
+  height: calc(100% - 48px - 64px);
+}
+
+.no-display {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
