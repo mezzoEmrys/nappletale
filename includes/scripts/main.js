@@ -35,6 +35,24 @@ function referenceMIS(misName){
     return el;
 }
 
+function referencePaffet(paffetName){
+    var paffet = data.paffet.filter(o => o.name == paffetName)[0];
+    var el = $("#paffet-ref-template").clone();
+    el.removeAttr("id");
+    el.removeClass("hidden-template");
+    $(".paffet-image", el).attr("src", "/images/"+paffet.image);
+    return el;
+}
+
+function referenceItem(itemName){
+    var item = data.item.filter(o => o.name == itemName)[0];
+    var el = $("#item-ref-template").clone();
+    el.removeAttr("id");
+    el.removeClass("hidden-template");
+    $(".item-image", el).attr("src", "/images/"+item.image);
+    return el;
+}
+
 function loadPaffetTab(){
     data.paffet.forEach(paffet => {
         var el = $("#paffet-template").clone();
@@ -49,8 +67,30 @@ function loadPaffetTab(){
     });
 }
 
-function loadMISTab(misData){
+function loadMISTab(){
+    data.mis.forEach(mis => {
+        var el = $("#mis-template").clone();
+        el.attr("id", "mis-"+mis.name);
+        el.removeClass("hidden-template");
+        if("display_name_en"in mis){
+            $(".mis-name", el).html(mis.display_name_en);
+        } else {
+            $(".mis-name", el).html(mis.name);
+        }
+        $(".mis-image", el).attr("src", "/images/"+mis.image);
+        data.item
+            .filter(i => i.mis.includes(mis.name))
+            .forEach(item => {
+            $(".mis-items", el).append(referenceItem(item.name));
+            });
+        data.paffet
+            .filter(p => p.mis.includes(mis.name))
+            .forEach(paffet => {
+            $(".mis-paffets", el).append(referencePaffet(paffet.name));
+            });
 
+        $("#mis-tab-pane").append(el);
+    });
 }
 
 function loadItemTab(){
