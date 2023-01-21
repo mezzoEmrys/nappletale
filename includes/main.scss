@@ -23,17 +23,51 @@ body {
     background-position: center;
 }
 
-.info-col {
+.listing-col {
     flex-grow:1;
+    display:flex;
+    flex-direction:column;
 }
 
-.side-col {
+.data-col {
     width: 20vw;
     min-width: 15em;
-    background-image: url("grit.png");
-    background-color:#a85a40
+    background-color:#ffcdbc;
+    display:flex;
+}
+
+.listing-pane {
+    padding: .5em;
+}
+
+.data-tex {
+    background-image: url("/images/web-assets/grit.png");
+    opacity: .8;
+    flex-grow:1;
+    padding: .5em;
 }
 
 .nav-icons {
     float:right;
+}
+
+.listing-col > div {
+    background-color: rgba(antiquewhite, 0.75);
+}
+
+ul.nav-tabs {
+    background-color:$headercolor;
+}
+
+.nav-tabs > .nav-item > .nav-link {
+    background-color: rgba(rgb(171, 155, 133), 0.75);
+    color:var(--bs-nav-tabs-link-active-color) !important;
+}
+
+button.nav-link.active {
+    background-color: rgba(antiquewhite, 0.75) !important;
+}
+
+.page-wrapper {
+    height: 100vh;
 }

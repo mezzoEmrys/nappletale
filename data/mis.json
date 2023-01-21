@@ -36,6 +36,7 @@
       "season":"spring"
     },
     {
+      "display_name_en": "Reflection/Image",
       "name": "image",
       "image": "nt-mis07.jpg",
       "season":"spring"
@@ -53,11 +54,13 @@
       "season":"spring"
     },
     {
+      "display_name_en": "Freshness",
       "name": "fresh",
       "image": "nt-mis10.jpg",
       "season":"spring"
     },
     {
+      "display_name_en": "Intelligence/Tact",
       "name": "idea",
       "image": "nt-mis11.jpg",
       "season":"spring"
@@ -237,6 +240,7 @@
       "season":"winter"
     },
     {
+      "display_name_en": "Foundation/Basis",
       "name": "foundation",
       "image": "nt-mis43.jpg",
       "season":"winter"
