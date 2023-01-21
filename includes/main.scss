@@ -16,7 +16,7 @@ $headerspacing: 1em;
 }
 
 body {
-    background-image: url("images/web-assets/stylized_bg.png");
+    background-image: url("../images/web-assets/stylized_bg.png");
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-size: 120vw;
@@ -47,7 +47,7 @@ body {
 }
 
 .textured {
-    background-image: url("images/web-assets/grit.png");
+    background-image: url("../images/web-assets/grit.png");
     opacity: .8;
     flex-grow:1;
     
