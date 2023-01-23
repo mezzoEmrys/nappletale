@@ -12,8 +12,9 @@ var dataFetched = Promise.allSettled([
 
 $(async () => {
     await dataFetched;
-    loadPaffetTab(data.paffet);
-    loadMISTab(data.mis);
+    loadPaffetTab();
+    loadMISTab();
+    loadItemTab();
     $(".journal-expander").click(() => {
         if($(".journal-col").hasClass("no-display")){
             $(".journal-expander").html("▶");
@@ -52,6 +53,17 @@ function referenceItem(itemName){
     $(".item-image", el).attr("src", "images/"+item.image);
     return el;
 }
+
+function referenceArea(areaName){
+    var area = data.area.filter(o => o.name == areaName)[0];
+    var el = $("#area-ref-template").clone();
+    el.removeAttr("id");
+    el.removeClass("hidden-template");
+    $(".area-name", el).html(area.name);
+    //do funny a tag things here
+    return el;
+}
+
 
 function loadPaffetTab(){
     data.paffet.forEach(paffet => {
@@ -94,7 +106,24 @@ function loadMISTab(){
 }
 
 function loadItemTab(){
+    data.item.forEach(item => {
+        var el = $("#item-template").clone();
+        el.attr("id", "item-"+item.name);
+        el.removeClass("hidden-template");
+        $(".item-name", el).html(item.name);
+        $(".item-image", el).attr("src", "images/"+item.image);
+        item.mis.forEach(misName => {
+            $(".item-mis", el).append(referenceMIS(misName));
+        })
+        data.area
+            .filter(a => a.items.includes(item.name))
+            .forEach(area => {
+            $(".item-areas", el).append(referenceArea(area.name));
+            });
 
+
+        $("#items-tab-pane").append(el);
+    });
 }
 
 function loadQuestTab(){

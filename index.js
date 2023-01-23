@@ -129,6 +129,16 @@ const server = http.createServer((req, res) => {
             res.end();
         }
     }
+    else if (req.url.startsWith("/favicon.ico")) {
+        if(fs.existsSync("."+req.url)){
+            res.setHeader("Content-Type", mime.lookup("."+req.url));
+            res.writeHead(200);
+            res.end(fs.readFileSync("."+req.url));
+        } else {
+            res.writeHead(404);
+            res.end();
+        }
+    }
 
     //fallthrough case, make sure to use res.end()!!
     if(!res.writableEnded){
