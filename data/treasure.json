@@ -1,0 +1,68 @@
+{
+    "treasure":[
+        {
+            "area": "Napple Town",
+            "description": "Prologue Items",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"crank"
+                }
+            ]
+        },
+        {
+            "area": "Napple Town",
+            "description": "Prologue, from Mele",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Vending Machine"
+                },
+                {
+                    "type":"recipe",
+                    "name":"Vending Machine"
+                }
+            ]
+        },
+        {
+            "area": "Napple Town",
+            "description": "Chest outside of Alice's house",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Cheerwhal"
+                }
+            ]
+        },
+        {
+            "area": "Napple Town",
+            "description": "Chest in chapel",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Healihoo"
+                }
+            ]
+        },
+        {
+            "area": "Napple Town",
+            "description": "Chest in Mayor Frogcar's house",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Milk Maker"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest on small ledge at start of level",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Healihoo"
+                }
+            ]
+        }
+    ]
+}

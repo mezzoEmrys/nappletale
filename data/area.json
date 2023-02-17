@@ -3,85 +3,71 @@
         {
             "name":"New Years Day",
             "season": "spring",
-            "chests": [],
             "items": ["necklace", "necklace", "sundial", "toy plane", "chess piece", "anvil", "block puzzle", "teddy bear"]
         },
         {
             "name":"Wild Wind",
             "season": "spring",
-            "chests": [],
             "items": ["electric circuit", "shooting star", "china plate", "quill pen", "movie film", "block puzzle", "chess piece"]
         },
         {
             "name":"Wonderbed",
             "season": "spring",
-            "chests": [],
             "items": ["bellows", "movie film", "china plate", "china plate", "anvil", "shooting star", "quill pen"]
         },
         {
             "name":"Hydrangea",
             "season": "summer",
-            "chests": [],
             "items": ["bird's nest", "bird's nest", "bellows", "balloon rabbit", "solar system", "bullet", "crank", "flask"]
         },
         {
             "name":"Once Summer",
             "season": "summer",
-            "chests": [],
             "items": ["toy plane", "bellows", "glass slippers", "log cabin", "necklace", "flask", "lock and key", "balloon rabbit"]
         },
         {
             "name":"Festival Night",
             "season": "summer",
-            "chests": [],
             "items": ["glass slippers", "electric circuit", "lock and key", "solar system", "balloon rabbit", "log cabin"]
         },
         {
             "name":"Red & Gold",
             "season": "autumn",
-            "chests": [],
             "items": ["crank", "bullet", "stump", "furnace", "farm equipment", "IC engine", "guitar", "offering"]
         },
         {
             "name":"Moaning Well",
             "season": "autumn",
-            "chests": [],
             "items": ["electric circuit", "sundial", "antique", "IC engine", "farm equipment", "guitar", "wine", "furnace"]
         },
         {
             "name":"Secret Garden",
             "season": "autumn",
-            "chests": [],
             "items": ["electric circuit", "antique", "wine", "sundial", "crank", "farm equipment"]
         },
         {
             "name":"Fjordland",
             "season": "winter",
-            "chests": [],
             "items": ["fossil", "bellows", "snowflake", "calendar", "camera", "venus flytrap", "animal skull"]
         },
         {
             "name":"Snow Corridor",
             "season": "winter",
-            "chests": [],
             "items": ["offering", "calendar", "venus flytrap", "sacred flame", "fossil", "snowflake"]
         },
         {
             "name":"Ice Palace",
             "season": "winter",
-            "chests": [],
             "items": ["sundial", "snowflake", "crank", "sacred flame", "camera", "calendar", "animal skull"]
         },
         {
             "name":"Napple Town",
             "season": "napple",
-            "chests": [],
             "items": ["tornado", "coral", "dollhouse", "double helix"]
         },
         {
             "name":"Vending Machine",
             "season": "napple",
-            "chests": [],
             "items": ["handbell", "earth", "flower arrangement", "dessert", "owl figurine", "ursa major", "painting", "tortoise incense burner"]
         }
     ]
