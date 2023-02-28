@@ -90,9 +90,11 @@
           </button>
         </li>
       </ul>
+<!-- Paffet panel -->
       <div class="tab-content flex-grow-1" id="myTabContent">
         <div class="listing-pane tab-pane fade show active" id="paffet-tab-pane" role="tabpanel" aria-labelledby="paffet-tab" tabindex="0"> 
           <div class="entry paffet-entry hidden-template" id="paffet-template">
+            <button type="button" class="journal-add">+</button>
             <img class="paffet-image">
             <span class="paffet-name"></span>
             <span class="paffet-details"></span>
@@ -100,25 +102,31 @@
             </div>
           </div>
         </div>
+<!-- MIS panel -->
         <div class="listing-pane tab-pane fade" id="mis-tab-pane" role="tabpanel" aria-labelledby="mis-tab" tabindex="0">
           <div class="entry mis-entry hidden-template" id="mis-template">
+            <button type="button" class="journal-add">+</button>
             <img class="mis-image">
             <span class="mis-name"></span>
             <div class="mis-items ref-container"><span>Comes from:</span></div>
             <div class="mis-paffets ref-container"><span>Used in:</span></div>
           </div>
         </div>
+<!-- Items panel -->
         <div class="listing-pane tab-pane fade" id="items-tab-pane" role="tabpanel" aria-labelledby="items-tab" tabindex="0">
           <div class="entry item-entry hidden-template" id="item-template">
+            <button type="button" class="journal-add">+</button>
             <img class="item-image">
             <span class="item-name"></span>
             <div class="item-mis ref-container"></div>
             <div class="item-areas ref-container"><span>Found in:</span></div>
           </div>
         </div>
+<!-- Quests panel -->
         <div class="listing-pane tab-pane fade" id="quests-tab-pane" role="tabpanel" aria-labelledby="quests-tab" tabindex="0">
           quests
         </div>
+<!-- Areas panel -->
         <div class="listing-pane tab-pane fade" id="areas-tab-pane" role="tabpanel" aria-labelledby="areas-tab" tabindex="0">
           areas
         </div>
@@ -135,12 +143,20 @@
     <div class="journal-col">
       <div class="textured data">
         <h3>Journal</h3>
+        <div class="journal-list" id="mis-list"></div>
+        <div class="journal-list" id="paffet-list"></div>
+        <div class="journal-list" id="item-list"></div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Template elements -->
+
+<div class="hidden-template" id="counter-template">
+  <div class="ref-holder"></div>
+  <div class="val-holder"><span class="counter-value"></span></div>
+</div>
 
 <div class="hidden-template mis-reference" id="mis-ref-template">
   <div class="tooltip-holder">

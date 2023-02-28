@@ -166,4 +166,15 @@ button.nav-link.active {
 
 .quickref-txt {
   display: block;
+}
+
+.journal-add {
+  float: right;
+  line-height: 1em;
+  padding: 0px;
+}
+
+.journal-list > div {
+  display: inline-block;
+  margin: 1px;
 }/*# sourceMappingURL=main.css.map */

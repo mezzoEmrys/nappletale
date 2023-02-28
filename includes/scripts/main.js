@@ -2,6 +2,75 @@
 
 const data = {};
 
+class countedObj {
+    constructor(obj, count) {
+        this.obj = obj;
+        this.count = count;
+    }
+}
+
+class countedList {
+    constructor(){
+        this.list = [];
+    }
+
+    add(obj, val=1){
+        var add = this.list.filter((cobj) => cobj.obj == obj);
+        if(add.length != 0){
+            add[0].count += val;
+        }
+        else {
+            this.list.push(new countedObj(obj, val));
+        }
+        return this;
+    }
+
+    remove(obj, val=-1){
+        return this.add(obj, val);
+    }
+
+    clean(){ this.list = this.list.filter((cobj) => cobj.count != 0); return this; }
+
+    sort(fn){
+        this.list.sort(fn); return this;
+    }
+
+    forEach(fn) { this.list.forEach(fn); }
+}
+
+class set {
+    constructor() {
+        this.list = [];
+    }
+
+    add(obj){
+        if(!this.list.includes(obj)){
+            this.list.push(obj);
+        }
+        return this;
+    }
+
+    remove(obj){
+        var ix = this.list.indexOf(obj);
+        if(ix > -1){
+            this.list.splice(ix, 1);
+        }
+        return this;
+    }
+
+    sort(fn){
+        this.list.sort(fn); return this;
+    }
+
+    forEach(fn) { this.list.forEach(fn); return this;}
+}
+
+const journal = {
+    mis : new countedList(),
+    paffet : new set(),
+    item : new countedList(),
+};
+
 function getFromByName(array, name){
     return array.filter(o => o.name == name)[0]
 }
@@ -35,7 +104,7 @@ $(async () => {
             $(".journal-col").addClass("no-display");
         }
     });
-    $(".hidden-template").remove();
+    //$(".hidden-template").remove();
 });
 
 function bindReferenceElement(element){
@@ -128,6 +197,11 @@ function tooltipText(el, array){
     return el;
 }
 
+function tooltipRemove(el){
+    $(".tooltip-data", el).remove();
+    return el;
+}
+
 function loadPaffetTab(){
     data.paffet.forEach(paffet => {
         var el = $("#paffet-template").clone();
@@ -139,6 +213,10 @@ function loadPaffetTab(){
             const mis = getFromByName(data.mis, misName);
             const items = data.item.filter(i => i.mis.includes(mis.name));
             $(".paffet-recipe", el).append(tooltipImage(referenceMIS(mis), items));
+        });
+        $(".journal-add", el).on("click", () => {
+            journal.paffet.add(paffet);
+            reloadJournal();
         });
         $("#paffet-tab-pane").append(el);
     });
@@ -190,8 +268,10 @@ function loadItemTab(){
                 var itemObjects = area.items.map(m => getFromByName(data.item, m));
                 $(".item-areas", el).append(tooltipImage(referenceArea(area), itemObjects));
             });
-
-
+        $(".journal-add", el).on("click", () => {
+            journal.item.add(item);
+            reloadJournal();
+        });
         $("#items-tab-pane").append(el);
     });
 }
@@ -201,5 +281,55 @@ function loadQuestTab(){
 }
 
 function loadAreaTab(){
+
+}
+
+function countedRef(refEl, count){
+    var el = $("#counter-template").clone();
+    el.removeAttr("id");
+    el.removeClass("hidden-template");
+    $(".ref-holder", el).append(refEl);
+    $(".counter-value", el).html(count);
+    return el;
+}
+
+function reloadJournal(){
+    $("#mis-list").empty();
+    $("#paffet-list").empty();
+    $("#item-list").empty();
+    journal.mis.clean();
+    journal.item.clean();
+
+    var misList = new countedList();
+
+    journal.mis.forEach((countedMis) => {
+        misList.add(countedMis.obj, countedMis.count);
+    })
+    // paffets are uncounted. you can only have 1 or 0.
+    journal.paffet
+        .sort((a, b) => data.paffet.indexOf(a) - data.paffet.indexOf(b))
+        .forEach((paffet) => {
+        var misObjects = paffet.mis.map(m => getFromByName(data.mis, m));
+        misObjects.forEach((mis) => misList.remove(mis));
+        $("#paffet-list").append(tooltipImage(referencePaffet(paffet), misObjects));
+    });
+    journal.item
+    .sort((a, b) => data.item.indexOf(a.obj) - data.item.indexOf(b.obj))
+        .forEach((countedItem) => {
+        item = countedItem.obj;
+        count = countedItem.count;
+        var misObjects = item.mis.map(m => getFromByName(data.mis, m));
+        misObjects.forEach((mis) => misList.add(mis));
+        $("#item-list").append(countedRef(tooltipImage(referenceItem(item), misObjects), count));
+    });
+
+    misList
+        .sort((a, b) => data.mis.indexOf(a.obj) - data.mis.indexOf(b.obj))
+        .forEach((countedMis) => {
+        mis = countedMis.obj;
+        count = countedMis.mis;
+        $("#mis-list").append(countedRef(tooltipRemove(referenceMIS(countedMis.obj)), countedMis.count));
+    });
+    
 
 }
