@@ -238,7 +238,7 @@ function loadMISTab(){
         var el = $("#mis-template").clone();
         el.attr("id", "mis-"+idFix(mis.name));
         el.removeClass("hidden-template");
-        if("display_name_en"in mis){
+        if("display_name_en" in mis){
             $(".mis-name", el).html(mis.display_name_en);
         } else {
             $(".mis-name", el).html(mis.name);
@@ -266,7 +266,11 @@ function loadItemTab(){
         var el = $("#item-template").clone();
         el.attr("id", "item-"+idFix(item.name));
         el.removeClass("hidden-template");
-        $(".item-name", el).html(item.name);
+        if("display_name_en" in item){
+            $(".item-name", el).html(item.display_name_en);
+        } else {
+            $(".item-name", el).html(item.name);
+        }
         $(".item-image", el).attr("src", "images/"+item.image);
         item.mis.forEach(misName => {
             const mis = getFromByName(data.mis, misName);

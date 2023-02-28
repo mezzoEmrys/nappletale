@@ -6,6 +6,14 @@
             "contents": [
                 {
                     "type":"item",
+                    "name":"teddy bear"
+                },
+                {
+                    "type":"item",
+                    "name":"earth"
+                },
+                {
+                    "type":"item",
                     "name":"crank"
                 }
             ]
@@ -56,6 +64,16 @@
         },
         {
             "area": "New Year's Day",
+            "description": "First enemy in level",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"necklace"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
             "description": "Chest on small ledge at start of level",
             "contents": [
                 {
@@ -63,6 +81,279 @@
                     "name":"Healihoo"
                 }
             ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest on tall hill above ledge",
+            "contents": [
+                {
+                    "type":"unknown"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest between hill and log",
+            "contents": [
+                {
+                    "type":"life"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest between hill and log",
+            "contents": [
+                {
+                    "type":"life"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "First enemy in icy cave",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"sundial"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Blue chest in cave",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Pricklit"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Second chest in cave",
+            "contents": [
+                {
+                    "type":"life"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Ledge with leaf steps",
+            "contents": [
+                {
+                    "type":"seed"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Enemy on ledge over ice spikes",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"toy plane"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest encased in ice over ice spikes",
+            "contents": [
+                {
+                    "type":"seed"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest on leaf outside Spring Alice's house",
+            "contents": [
+                {
+                    "type":"life"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Bottom enemy in front of six leaf steps",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"necklace"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Bottom enemy in front of six leaf steps",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"necklace"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "On top of the highest of the six leaf steps",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Cheerwhal"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Lower of two enemies between moving platforms",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"chess piece"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Second cloud enemy in Auld Lang Falls",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"anvil"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest at top of Auld Lang Falls",
+            "contents": [
+                {
+                    "type":"life"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest on ledge past chest at top of Auld Lang Falls",
+            "contents": [
+                {
+                    "type":"unknown"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest halfway down Auld Lang Falls on right",
+            "contents": [
+                {
+                    "type":"seed"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest halfway down Auld Lang Falls on left below mimic",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Swooshums"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest at bottom left of Auld Lang Falls",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Booster"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Under arch",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Church Bell"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Second scooter enemy above arch",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"block puzzle"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Bottom shooter enemy before third cliff-step",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"teddy bear"
+                }
+            ]
+        },
+        {
+            "area": "New Year's Day",
+            "description": "Chest on top of third cliff-step at end of level",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Frazzly"
+                }
+            ]
+        },
+        {
+            "area": "Napple Town",
+            "description": "Minister Druid gift after completing New Year's Day",
+            "contents": [
+                {
+                    "type":"item",
+                    "name":"IC engine"
+                },
+                {
+                    "type":"item",
+                    "name":"coral"
+                },
+                {
+                    "type":"item",
+                    "name":"tornado"
+                },
+                {
+                    "type":"item",
+                    "name":"offering"
+                }
+            ]
+        },
+        {
+            "area": "Napple Town",
+            "description": "Enter Porch's room after completing New Year's Day",
+            "contents": [
+                {
+                    "type":"recipe",
+                    "name":"Booster"
+                }
+            ]
+        },
+        {
+            "area": "Napple Town",
+            "description": "Leap Academy",
+            "contents": [
+                {
+                    "type":"seed"
+                }
+            ]
         }
+
+        
     ]
 }

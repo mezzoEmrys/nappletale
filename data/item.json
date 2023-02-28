@@ -1,6 +1,7 @@
 {
     "item":[
         {
+            "display_name_en": "Teddy Bear",
             "name":"teddy bear",
             "mis":["physical rest", "play", "dreams"],
             "image":"nt-i01.jpg"
@@ -11,6 +12,7 @@
             "image":"nt-i02.jpg"
         },
         {
+            "display_name_en": "Model Plane",
             "name":"toy plane",
             "mis":["wind", "play", "rotate"],
             "image":"nt-i03.jpg"
@@ -36,6 +38,7 @@
             "image":"nt-i07.jpg"
         },
         {
+            "display_name_en":"Anvil",
             "name":"anvil",
             "mis":["flat", "rigor", "balance"],
             "image":"nt-i08.jpg"
@@ -76,6 +79,7 @@
             "image":"nt-i15.jpg"
         },
         {
+            "display_name_en": "Chess Piece",
             "name":"chess piece",
             "mis":["wind", "ice", "idea"],
             "image":"nt-i16.jpg"
@@ -96,6 +100,7 @@
             "image":"nt-i19.jpg"
         },
         {
+            "display_name_en": "Globe",
             "name":"earth",
             "mis":["air", "change", "water", "ball"],
             "image":"nt-i20.jpg"
@@ -106,6 +111,7 @@
             "image":"nt-i21.jpg"
         },
         {
+            "display_name_en": "IC Engine",
             "name":"IC engine",
             "mis":["strength", "machine", "fire"],
             "image":"nt-i22.jpg"
@@ -116,11 +122,13 @@
             "image":"nt-i23.jpg"
         },
         {
+            "display_name_en":"Coral",
             "name":"coral",
             "mis":["emotional rest", "pure", "harvest", "stillness"],
             "image":"nt-i24.jpg"
         },
         {
+            "display_name_en": "Crank",
             "name":"crank",
             "mis":["change", "machine", "activity"],
             "image":"nt-i25.jpg"
@@ -151,6 +159,7 @@
             "image":"nt-i30.jpg"
         },
         {
+            "display_name_en":"Sundial",
             "name":"sundial",
             "mis":["time", "light","change"],
             "image":"nt-i31.jpg"
@@ -161,6 +170,7 @@
             "image":"nt-i32.jpg"
         },
         {
+            "display_name_en":"Block Puzzle",
             "name":"block puzzle",
             "mis":["physical rest", "play", "idea"],
             "image":"nt-i33.jpg"
@@ -211,6 +221,7 @@
             "image":"nt-i42.jpg"
         },
         {
+            "display_name_en":"Tornado",
             "name":"tornado",
             "mis":["strength", "air","agility", "rotate"],
             "image":"nt-i43.jpg"
@@ -231,6 +242,7 @@
             "image":"nt-i46.jpg"
         },
         {
+            "display_name_en":"Offering Plate",
             "name":"offering",
             "mis":["pure", "foundation", "harvest"],
             "image":"nt-i47.jpg"
@@ -241,6 +253,7 @@
             "image":"nt-i48.jpg"
         },
         {
+            "display_name_en":"Necklace",
             "name":"necklace",
             "mis":["wind", "air", "rigor"],
             "image":"nt-i49.jpg"
