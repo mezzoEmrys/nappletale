@@ -15,12 +15,15 @@ contains decodable items and their MIS
 ### mis.json 
 contains all MIS
 ### area.json 
-contains each explorable area, along with which items and recipes can be found there 
+contains each explorable area, along with any other important data pertinent to the area
+#### TODO
+* map renders?
+### treasure.json
+list of all treasures (enemies, chests, events)
 #### TODO
 * list of recipes that can be found
 * images for chests + contents
 * images for enemies that drop items
-* map renders?
 ### quest.json 
 contains each quest, with paffets required, requirements, and blockers
 #### TODO
@@ -32,13 +35,12 @@ contains each quest, with paffets required, requirements, and blockers
 ## Webpage TODO:
 
 ### Encyclopedia
-* Tooltips on cross reference for tabs
-* Click to jump between tabs
+blocked by quest, treasure data
 
 ### Journal
-* Push recipes, items, mis to Journal
-* Clear elements from Journal
-
+provide calculators for additional information
+* craftable paffets with current mis
+* backpack problem item sets to solve mis requirements
 
 ## Bingo TODO:
 
@@ -50,6 +52,7 @@ contains each quest, with paffets required, requirements, and blockers
 * Open World romhack
 * More Dove Clock
 * No Dove Clock
+* Dove Clock Jumpscare
 
 ## Randomizer TODO:
 
@@ -59,6 +62,6 @@ contains each quest, with paffets required, requirements, and blockers
 
 ### Notes:
 
-MIS pool for paffets, items
-Enemizer
-fucked up quest prerequisites (eg. winter petal for the wind to work in Wild Wind)
+* MIS pool for paffets, items
+* Enemizer
+* fucked up quest prerequisites (eg. winter petal for the wind to work in Wild Wind)
