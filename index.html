@@ -153,9 +153,20 @@
 
 <!-- Template elements -->
 
-<div class="hidden-template" id="counter-template">
+<div class="hidden-template abs-anchor" id="set-template">
+  <div class="floating-buttons">
+    <button type="button" class="journal-remove">-</button>
+  </div>
   <div class="ref-holder"></div>
-  <div class="val-holder"><span class="counter-value"></span></div>
+</div>
+
+<div class="hidden-template abs-anchor" id="counter-template">
+  <div class="floating-buttons">
+    <button type="button" class="journal-add">+</button>
+    <button type="button" class="journal-remove">-</button>
+  </div>
+  <div class="floating-counter val-holder"><span class="counter-value"></span></div>
+  <div class="ref-holder"></div>
 </div>
 
 <div class="hidden-template mis-reference" id="mis-ref-template">

@@ -123,6 +123,20 @@ function bindReferenceElement(element){
     });
 }
 
+function bindJAdd(el, list, obj){
+    $(".journal-add", el).on("click", () => {
+        list.add(obj);
+        reloadJournal();
+    });
+}
+
+function bindJRemove(el, list, obj){
+    $(".journal-remove", el).on("click", () => {
+        list.remove(obj);
+        reloadJournal();
+    });
+}
+
 function referenceMIS(mis){
     var el = $("#mis-ref-template").clone();
     el.removeAttr("id");
@@ -214,10 +228,7 @@ function loadPaffetTab(){
             const items = data.item.filter(i => i.mis.includes(mis.name));
             $(".paffet-recipe", el).append(tooltipImage(referenceMIS(mis), items));
         });
-        $(".journal-add", el).on("click", () => {
-            journal.paffet.add(paffet);
-            reloadJournal();
-        });
+        bindJAdd(el, journal.paffet, paffet);
         $("#paffet-tab-pane").append(el);
     });
 }
@@ -245,7 +256,7 @@ function loadMISTab(){
                 var misObjects = p.mis.map(m => getFromByName(data.mis, m));
                 $(".mis-paffets", el).append(tooltipImage(referencePaffet(p), misObjects));
             });
-
+        bindJAdd(el, journal.mis, mis);
         $("#mis-tab-pane").append(el);
     });
 }
@@ -268,10 +279,7 @@ function loadItemTab(){
                 var itemObjects = area.items.map(m => getFromByName(data.item, m));
                 $(".item-areas", el).append(tooltipImage(referenceArea(area), itemObjects));
             });
-        $(".journal-add", el).on("click", () => {
-            journal.item.add(item);
-            reloadJournal();
-        });
+        bindJAdd(el, journal.item, item);
         $("#items-tab-pane").append(el);
     });
 }
@@ -290,6 +298,17 @@ function countedRef(refEl, count){
     el.removeClass("hidden-template");
     $(".ref-holder", el).append(refEl);
     $(".counter-value", el).html(count);
+    if(count < 0){
+        $(".counter-value", el).addClass("negative");
+    }
+    return el;
+}
+
+function setRef(refEl) {
+    var el = $("#set-template").clone();
+    el.removeAttr("id");
+    el.removeClass("hidden-template");
+    $(".ref-holder", el).append(refEl);
     return el;
 }
 
@@ -311,24 +330,32 @@ function reloadJournal(){
         .forEach((paffet) => {
         var misObjects = paffet.mis.map(m => getFromByName(data.mis, m));
         misObjects.forEach((mis) => misList.remove(mis));
-        $("#paffet-list").append(tooltipImage(referencePaffet(paffet), misObjects));
+        var newEl = setRef(tooltipImage(referencePaffet(paffet), misObjects));
+        bindJRemove(newEl, journal.paffet, paffet);
+        $("#paffet-list").append(newEl);
     });
     journal.item
-    .sort((a, b) => data.item.indexOf(a.obj) - data.item.indexOf(b.obj))
+        .sort((a, b) => data.item.indexOf(a.obj) - data.item.indexOf(b.obj))
         .forEach((countedItem) => {
-        item = countedItem.obj;
-        count = countedItem.count;
+        var item = countedItem.obj;
+        var count = countedItem.count;
         var misObjects = item.mis.map(m => getFromByName(data.mis, m));
         misObjects.forEach((mis) => misList.add(mis));
-        $("#item-list").append(countedRef(tooltipImage(referenceItem(item), misObjects), count));
+        var newEl = countedRef(tooltipImage(referenceItem(item), misObjects), count);
+        bindJAdd(newEl, journal.item, item);
+        bindJRemove(newEl, journal.item, item);
+        $("#item-list").append(newEl);
     });
 
     misList
         .sort((a, b) => data.mis.indexOf(a.obj) - data.mis.indexOf(b.obj))
         .forEach((countedMis) => {
-        mis = countedMis.obj;
-        count = countedMis.mis;
-        $("#mis-list").append(countedRef(tooltipRemove(referenceMIS(countedMis.obj)), countedMis.count));
+        var mis = countedMis.obj;
+        var count = countedMis.count;
+        var newEl = countedRef(tooltipRemove(referenceMIS(mis)), count);
+        bindJAdd(newEl, journal.mis, mis);
+        bindJRemove(newEl, journal.mis, mis);
+        $("#mis-list").append(newEl);
     });
     
 

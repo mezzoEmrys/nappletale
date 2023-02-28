@@ -39,6 +39,7 @@ body {
     max-width: 50vw;
     background-color:#ffcdbc;
     display:flex;
+    overflow-y: scroll;
 }
 
 .journal-expander-col {
@@ -141,7 +142,7 @@ button.nav-link.active {
     left: 0%;
 
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     
     min-width: 110px;
 }
@@ -180,7 +181,39 @@ button.nav-link.active {
     padding: 0px;
 }
 
+.journal-remove {
+    float:right;
+    line-height: 1em;
+    padding: 0px;
+}
+
 .journal-list > div{
     display: inline-block;
     margin: 1px;
+}
+
+.floating-buttons{
+    position: absolute;
+    z-index: 5;
+    right: 0;
+}
+
+.floating-counter {
+    position: absolute;
+    z-index:1;
+    bottom:0;
+    background-color: rgba(white, 0.5);
+    color: green;
+}
+
+.counter-value {
+    font-weight: bold;
+}
+
+.negative {
+    color: darkred;
+}
+
+.abs-anchor{
+    position: relative;
 }
