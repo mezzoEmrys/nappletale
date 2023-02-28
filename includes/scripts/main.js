@@ -340,7 +340,7 @@ function reloadJournal(){
         var item = countedItem.obj;
         var count = countedItem.count;
         var misObjects = item.mis.map(m => getFromByName(data.mis, m));
-        misObjects.forEach((mis) => misList.add(mis));
+        misObjects.forEach((mis) => misList.add(mis, count));
         var newEl = countedRef(tooltipImage(referenceItem(item), misObjects), count);
         bindJAdd(newEl, journal.item, item);
         bindJRemove(newEl, journal.item, item);
