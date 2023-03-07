@@ -1,13 +1,18 @@
 .json-output {
-  overflow: auto;
-  overflow-y: scroll;
-  white-space: pre;
-  font-family: monospace;
   float: right;
   width: 20%;
   position: absolute;
   right: 0px;
   top: 0px;
+}
+
+.json-output > output {
+  overflow: auto;
+  overflow-y: scroll;
+  white-space: pre;
+  font-family: monospace;
+  width: 100%;
+  font-size: 0.75em;
 }
 
 button:focus {
@@ -20,4 +25,8 @@ input[type=text] {
 
 input[type=text].wider {
   width: 25em;
+}
+
+.copy-button {
+  width: 100%;
 }/*# sourceMappingURL=treasure.css.map */
