@@ -99,27 +99,10 @@ const server = http.createServer((req, res) => {
         res.write("</body></html>")
         res.end();
     }
-    else if (req.url.startsWith("/images/")) {
-        if(fs.existsSync("."+req.url)){
-            res.setHeader("Content-Type", mime.lookup("."+req.url));
-            res.writeHead(200);
-            res.end(fs.readFileSync("."+req.url));
-        } else {
-            res.writeHead(404);
-            res.end();
-        }
-    }
-    else if (req.url.startsWith("/includes/")) {
-        if(fs.existsSync("."+req.url)){
-            res.setHeader("Content-Type", mime.lookup("."+req.url));
-            res.writeHead(200);
-            res.end(fs.readFileSync("."+req.url));
-        } else {
-            res.writeHead(404);
-            res.end();
-        }
-    }
-    else if (req.url.startsWith("/data/")) {
+    else if (req.url.startsWith("/images/") ||
+             req.url.startsWith("/includes/") ||
+             req.url.startsWith("/data/") ||
+             req.url.startsWith("/tools/")) {
         if(fs.existsSync("."+req.url)){
             res.setHeader("Content-Type", mime.lookup("."+req.url));
             res.writeHead(200);

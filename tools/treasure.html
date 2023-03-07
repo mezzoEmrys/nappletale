@@ -15,16 +15,74 @@
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
     crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="includes/scripts/treasures.js"></script>
+    <link href="../includes/treasure.css" rel="stylesheet">
+    <link href="../includes/templates.css" rel="stylesheet">
+    <script src="../includes/scripts/treasures.js"></script>
     <title>Napple Tale Treasure Input Helper</title>
 </head>
 <body>
-<div id="treasure-template" class="hidden-template">
-<input type="text" list="areas">
+
+<output id="json" class="json-output">
+</output>
+
+<!-- templates -->
+<ul class="item-container">
+<li id="treasure-template" class="hidden-template">
+<div>
+<input type="text" list="areas" data-json-tag="area" placeholder="Area">
+<input type="text" list="drop-types" data-json-tag="type" placeholder="Method">
+<input type="text" list="enemies" data-json-tag="enemy" placeholder="Enemy Name">
+<input type="text" data-json-tag="description" placeholder="Description" class="wider">
+<ul class="item-container">
+    <li id="content-template" class="hidden-template">
+    <div>
+        <input type="text" list="content-types" data-json-tag="type" placeholder="Treasure type">
+        <input type="text" list="paffets" data-json-tag="name" placeholder="Paffet name" class="wider">
+        <input type="text" list="items" data-json-tag="name" placeholder="Item name" class="wider">
+    </div>
+    </li>
+<li><button class="add-content"> + </button></li>
+</ul>
+
 </div>
+</li>
+<li><button class="add-treasure"> + </button></li>
+</ul>
 
-<datalist id="areas">
 
+<!-- datalists -->
+<datalist id="drop-types">
+    <option value="enemy"></option>
+    <option value="event"></option>
+    <option value="chest"></option>
+</datalist>
+<datalist id="content-types">
+    <option value="recipe"></option>
+    <option value="seed"></option>
+    <option value="life"></option>
+    <option value="item"></option>
+    <option value="unknown"></option>
+</datalist>
+<datalist id="areas"></datalist>
+<datalist id="paffets"></datalist>
+<datalist id="items"></datalist>
+<datalist id="enemies">
+    <option value="Scootonian"></option>
+    <option value="Schynless"></option>
+    <option value="Rocinante"></option>
+    <option value="Sock Bunny"></option>
+    <option value="Baller Cannon"></option>
+    <option value="Cawlemagne"></option>
+    <option value="Blast Flower"></option>
+    <option value="Jubulb"></option>
+    <option value="X Robo"></option>
+    <option value="Vultrix"></option>
+    <option value="Plumpkin"></option>
+    <option value="Bomba Weed"></option>
+    <option value="Rumblebee"></option>
+    <option value="Hipponimbus"></option>
+    <option value="Rorq'n Roll"></option>
+    <option value="Mimic"></option>
 </datalist>
 </body>
 </html>

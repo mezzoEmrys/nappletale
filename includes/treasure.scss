@@ -1,0 +1,22 @@
+.json-output {
+    overflow: auto;
+    overflow-y: scroll;
+    white-space: pre;
+    font-family: monospace;
+    float: right;
+    width: 20%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+button:focus{
+    background-color: aquamarine;
+}
+
+input[type=text]{
+    width:10em;
+}
+input[type=text].wider {
+    width:25em;
+}
