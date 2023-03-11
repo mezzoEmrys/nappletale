@@ -27,25 +27,26 @@ function updateJson(){
             building += '  "enemy":"' + $("input[list=enemies]", el).val() + '",\n';
         }
         building += '  "description":"' + $("input[data-json-tag=description]", el).val() + '",\n';
-        building += '  "contents":[\n'
+        building += '  "contents":[ ';
         $(".content-entry", el).each(function (ix, el) {
             var target = $("input[list=content-types]", el).val();
-            building += "    {\n";
-            building += '    "type":"' + target + '",\n';
+            building += "\n    {";
+            building += '\n    "type":"' + target + '"';
             if(target == "recipe"){
-                building += '    "name":"' + $("input[list=paffets]", el).val() + '"\n';
+                building += ',\n    "name":"' + $("input[list=paffets]", el).val() + '"';
             }
             else if (target == "item"){
-                building += '    "name":"' + $("input[list=items]", el).val() + '"\n';
+                building += ',\n    "name":"' + $("input[list=items]", el).val() + '"';
             }
-            building += "    },\n";
+            building += "\n    },";
         });
-        building = building.slice(0, -2)+"\n";
+        building = building.slice(0, -1) + "\n";
         building += "  ]\n";
         building += '},\n';
     });
 
     $("#json").val("[\n" + building.trim().slice(0, -1) + "\n]");
+    localStorage.setItem("lastData", $("#json").val());
 }
 
 function jsonToElements() {
@@ -54,11 +55,13 @@ function jsonToElements() {
         str = JSON.parse($("textarea").val());
     }
     catch(e){
+        console.error(e);
         try {
             str = JSON.parse("[" + $("textarea").val() + "]");
         }
         catch(e){
             $.toast("Couldn't load data.");
+            console.error(e);
             return;
         }
     }
@@ -74,6 +77,7 @@ function jsonToElements() {
 
     $(".entry").remove();
     str.forEach(obj => createEntry($(".add-treasure"), obj));
+    updateJson();
 }
 
 function createEntry(context, obj = null) {
@@ -172,7 +176,9 @@ $(async () => {
         $.toast("Copied");
     });
 
+    $("#json").val(localStorage.getItem("lastData"));
+
     $("#load").on("click", () => {
         jsonToElements();
-    });
+    }).trigger("click");
 });
