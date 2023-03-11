@@ -45,6 +45,10 @@ function updateJson(){
     $("#json").html(building);
 }
 
+function jsonToElements() {
+    
+}
+
 $(async () => {
     await dataFetched;
     data.area.map(o => makeOption(o)).forEach(o => $("#areas").append(o));
@@ -82,7 +86,17 @@ $(async () => {
                 else $("input[list=items]", newEl).hide();
             }).trigger("change");
             $("input", newEl).on("change", updateJson);
+            $(".remove-entry", newEl).on("click", function() {
+                $(this).closest('li').remove();
+                updateJson();
+            });
         });
+
+        $(".remove-entry", newEl).on("click", function() {
+            $(this).closest('li').remove();
+            updateJson();
+        });
+
 
         $("input", newEl).on("change", updateJson);
     });
@@ -91,5 +105,20 @@ $(async () => {
     $("#copy").on("click", () => {
         $("#json").select();
         document.execCommand("copy");
-    })
+        if (document.selection && document.selection.empty) 
+        {
+            document.selection.empty();
+        } 
+        else if (window.getSelection) 
+        {
+            var sel= window.getSelection();
+            if(sel && sel.removeAllRanges)
+                sel.removeAllRanges();
+        }
+        $.toast("Copied");
+    });
+
+    $("#load").on("click", () => {
+        jsonToElements();
+    });
 });

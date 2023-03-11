@@ -17,14 +17,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../includes/treasure.css" rel="stylesheet">
     <link href="../includes/templates.css" rel="stylesheet">
+    <link href="../includes/jquery.toast.css" rel="stylesheet">
+    <script src="../includes/scripts/jquery.toast.js"></script>
     <script src="../includes/scripts/treasures.js"></script>
     <title>Napple Tale Treasure Input Helper</title>
 </head>
 <body>
 <div class="json-output">
     <button type="button" id="copy" class="copy-button">Copy to Clipboard</button>
-    <output id="json">
-    </output>
+    <textarea id="json">
+    </textarea>
+    <!--<button type="button" id="load" class="load-button">Load Json</button>-->
 </div>
 
 
@@ -32,6 +35,7 @@
 <ul class="item-container">
 <li id="treasure-template" class="hidden-template">
 <div>
+<button class="remove-entry"> - </button>
 <input type="text" list="areas" data-json-tag="area" placeholder="Area">
 <input type="text" list="drop-types" data-json-tag="type" placeholder="Method">
 <input type="text" list="enemies" data-json-tag="enemy" placeholder="Enemy Name">
@@ -39,6 +43,7 @@
 <ul class="item-container">
     <li id="content-template" class="hidden-template">
     <div>
+        <button class="remove-entry"> - </button>
         <input type="text" list="content-types" data-json-tag="type" placeholder="Treasure type">
         <input type="text" list="paffets" data-json-tag="name" placeholder="Paffet name" class="wider">
         <input type="text" list="items" data-json-tag="name" placeholder="Item name" class="wider">

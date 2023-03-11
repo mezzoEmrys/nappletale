@@ -4,15 +4,26 @@
     position: absolute;
     right: 0px;
     top: 0px;
+    display:flex;
+    flex-direction: column;
+    align-content: stretch;
+    height: 100vh;
 }
 
-.json-output > output {
+.json-output > * {
+    width: 100%;
+}
+
+.json-output > textarea {
     overflow: auto;
     overflow-y: scroll;
     white-space: pre;
     font-family: monospace;
-    width: 100%;
     font-size: .75em;
+}
+
+textarea {
+    flex-grow:100;
 }
 
 button:focus{
@@ -24,8 +35,4 @@ input[type=text]{
 }
 input[type=text].wider {
     width:25em;
-}
-
-.copy-button {
-    width:100%
 }
