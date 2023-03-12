@@ -100,11 +100,11 @@ function createEntry(context, obj = null) {
         });
     }
 
-    $("input[list=drop-types]", newEl).on("change", function() {
+    $("input[list=drop-types]", newEl).on("input", function() {
         var val = $(this).val();
         if(val == "enemy") $("input[list=enemies]", newEl).show();
         else $("input[list=enemies]", newEl).hide();
-    }).trigger("change");
+    }).trigger("input");
 
     $(".add-content", newEl).on("click", function() {
         createContent(this);
@@ -115,7 +115,7 @@ function createEntry(context, obj = null) {
         updateJson();
     });
 
-    $("input", newEl).on("change", updateJson);
+    $("input", newEl).on("input", updateJson);
 }
 
 function createContent(context, obj = null){
@@ -135,14 +135,14 @@ function createContent(context, obj = null){
             $("input[list=items]", newEl).val(obj.name);
     }
 
-    $("input[list=content-types]", newEl).on("change", function() {
+    $("input[list=content-types]", newEl).on("input", function() {
         var val = $(this).val();
         if(val == "recipe") $("input[list=paffets]", newEl).show();
         else $("input[list=paffets]", newEl).hide();
         if(val == "item") $("input[list=items]", newEl).show();
         else $("input[list=items]", newEl).hide();
-    }).trigger("change");
-    $("input", newEl).on("change", updateJson);
+    }).trigger("input");
+    $("input", newEl).on("input", updateJson);
     $(".remove-entry", newEl).on("click", function() {
         $(this).closest('li').remove();
         updateJson();
