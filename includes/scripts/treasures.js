@@ -27,6 +27,7 @@ function updateJson(){
             building += '  "enemy":"' + $("input[list=enemies]", el).val() + '",\n';
         }
         building += '  "description":"' + $("input[data-json-tag=description]", el).val() + '",\n';
+        building += '  "screenshot":"' + $("input[data-json-tag=screenshot]", el).val() + '",\n';
         building += '  "contents":[ ';
         $(".content-entry", el).each(function (ix, el) {
             var target = $("input[list=content-types]", el).val();
@@ -94,6 +95,7 @@ function createEntry(context, obj = null) {
         $("[data-json-tag=type]", newEl).val(obj.type);
         $("[data-json-tag=enemy]", newEl).val(obj.enemy);
         $("[data-json-tag=description]", newEl).val(obj.description);
+        $("[data-json-tag=screenshot]", newEl).val(obj.screenshot ?? "");
 
         obj.contents.forEach((val) => {
             createContent($(".add-content", newEl), val);
