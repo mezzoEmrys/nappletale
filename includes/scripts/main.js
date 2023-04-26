@@ -107,25 +107,24 @@ $(async () => {
     //$(".hidden-template").remove();
 
     const BORDER_SIZE = 4;
-    const panel = document.getElementById("right_panel");
+    const panel = $(".journal-col");
 
     let m_pos;
     function resize(e){
-    const dx = m_pos - e.x;
-    m_pos = e.x;
-    panel.style.width = (parseInt(getComputedStyle(panel, '').width) + dx) + "px";
+        const dx = m_pos - e.x;
+        m_pos = e.x;
+        panel.width((panel.width() + dx) + "px");
     }
 
-    panel.addEventListener("mousedown", function(e){
+    panel.on("mousedown", function(e){
     if (e.offsetX < BORDER_SIZE) {
         m_pos = e.x;
-        document.addEventListener("mousemove", resize, false);
-    }
-    }, false);
+        $(document).off("mousemove", resize);
+    }});
 
-    document.addEventListener("mouseup", function(){
-        document.removeEventListener("mousemove", resize, false);
-    }, false);
+    $(document).on("mouseup", function(){
+        $(document).off("mousemove", resize);
+    });
 });
 
 function bindReferenceElement(element){
