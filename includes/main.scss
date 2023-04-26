@@ -40,6 +40,16 @@ body {
     background-color:#ffcdbc;
     display:flex;
     overflow-y: scroll;
+    
+    &::after{
+        content: '';
+        background-color: #ccc;
+        position: absolute;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        cursor: ew-resize;
+    }
 }
 
 .journal-expander-col {
@@ -118,57 +128,57 @@ button.nav-link.active {
     max-width: 20vw;
     padding: 3px;
     transition: all 0.5s ease;
-}
 
-.entry.selected {
-    background-color: rgba(green, 0.75);
+    &.selected {
+        background-color: rgba(green, 0.75);
+    }
 }
 
 .tooltip-holder {
     position: relative;
     display: inline-block;
-}
-  
-.tooltip-holder .tooltip-data {
-    visibility: hidden;
-    background-color: rgba(black, 0.8);
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 6px;
-   
-    /* Position the tooltip text - see examples below! */
-    bottom: 100%;
-    left: 0%;
 
-    position: absolute;
-    z-index: 10;
+    .tooltip-data {
+        visibility: hidden;
+        background-color: rgba(black, 0.8);
+        color: #fff;
+        text-align: center;
+        padding: 5px;
+        border-radius: 6px;
+       
+        /* Position the tooltip text - see examples below! */
+        bottom: 100%;
+        left: 0%;
     
-    min-width: 110px;
-}
+        position: absolute;
+        z-index: 10;
+        
+        min-width: 110px;
+    }
 
-.tooltip-holder:hover .tooltip-data {
-    visibility: visible;
-  }
+    &:hover .tooltip-data {
+        visibility: visible;
+    }
 
-.tooltip-holder .tooltip-data::after {
-    content: " ";
-    position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
-    left: 10px;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
+    .tooltip-data::after {
+        content: " ";
+        position: absolute;
+        top: 100%; /* At the bottom of the tooltip */
+        left: 10px;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
 }
 
 .quickref-img {
     display:inline-block;
-}
 
-.quickref-img img {
-    width: 48px;
-    height: 48px;
+    img {
+        width: 48px;
+        height: 48px;
+    }
 }
 
 .quickref-txt {

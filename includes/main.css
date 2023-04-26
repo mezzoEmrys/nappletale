@@ -38,6 +38,15 @@ body {
   display: flex;
   overflow-y: scroll;
 }
+.journal-col::after {
+  content: "";
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  cursor: ew-resize;
+}
 
 .journal-expander-col {
   background-color: #ffcdbc;
@@ -116,7 +125,6 @@ button.nav-link.active {
   padding: 3px;
   transition: all 0.5s ease;
 }
-
 .entry.selected {
   background-color: rgba(0, 128, 0, 0.75);
 }
@@ -125,7 +133,6 @@ button.nav-link.active {
   position: relative;
   display: inline-block;
 }
-
 .tooltip-holder .tooltip-data {
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.8);
@@ -140,11 +147,9 @@ button.nav-link.active {
   z-index: 10;
   min-width: 110px;
 }
-
 .tooltip-holder:hover .tooltip-data {
   visibility: visible;
 }
-
 .tooltip-holder .tooltip-data::after {
   content: " ";
   position: absolute;
@@ -159,7 +164,6 @@ button.nav-link.active {
 .quickref-img {
   display: inline-block;
 }
-
 .quickref-img img {
   width: 48px;
   height: 48px;
