@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+    crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" 
+    crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../includes/treasure.css" rel="stylesheet">
+    <link href="../includes/templates.css" rel="stylesheet">
+    <link href="../includes/jquery.toast.css" rel="stylesheet">
+    <script src="../includes/scripts/jquery.toast.js"></script>
+    <script src="../includes/scripts/treasures.js"></script>
+    <title>Napple Tale Treasure Input Helper</title>
+</head>
+<body>
+<div class="json-output">
+    <button type="button" id="copy" class="copy-button">Copy to Clipboard</button>
+    <textarea id="json" spellcheck="false">
+    </textarea>
+    <button type="button" id="load" class="load-button">Load Json</button>
+</div>
+
+
+<!-- templates -->
+<ul class="item-container">
+<li id="treasure-template" class="hidden-template">
+<div>
+<button class="remove-entry"> - </button>
+<input type="text" list="areas" data-json-tag="area" placeholder="Area">
+<input type="text" list="drop-types" data-json-tag="type" placeholder="Method">
+<input type="text" list="enemies" data-json-tag="enemy" placeholder="Enemy Name">
+<input type="text" data-json-tag="description" placeholder="Description" class="wider">
+<br>
+<span>Screenshot: /images/screenshots/treasures/</span><input type="text" data-json-tag="screenshot" class="wider">
+<ul class="item-container">
+    <li id="content-template" class="hidden-template">
+    <div>
+        <button class="remove-entry"> - </button>
+        <input type="text" list="content-types" data-json-tag="type" placeholder="Treasure type">
+        <input type="text" list="paffets" data-json-tag="name" placeholder="Paffet name" class="wider">
+        <input type="text" list="items" data-json-tag="name" placeholder="Item name" class="wider">
+    </div>
+    </li>
+<li><button class="add-content"> + </button></li>
+</ul>
+
+</div>
+</li>
+<li><button class="add-treasure"> + </button></li>
+</ul>
+
+
+<!-- datalists -->
+<datalist id="drop-types">
+    <option value="enemy"></option>
+    <option value="event"></option>
+    <option value="chest"></option>
+</datalist>
+<datalist id="content-types">
+    <option value="recipe"></option>
+    <option value="seed"></option>
+    <option value="life"></option>
+    <option value="item"></option>
+    <option value="unknown"></option>
+</datalist>
+<datalist id="areas"></datalist>
+<datalist id="paffets"></datalist>
+<datalist id="items"></datalist>
+<datalist id="enemies">
+    <option value="Scootonian"></option>
+    <option value="Schynless"></option>
+    <option value="Rocinante"></option>
+    <option value="Sock Bunny"></option>
+    <option value="Baller Cannon"></option>
+    <option value="Cawlemagne"></option>
+    <option value="Blast Flower"></option>
+    <option value="Jubulb"></option>
+    <option value="X Robo"></option>
+    <option value="Vultrix"></option>
+    <option value="Plumpkin"></option>
+    <option value="Bomba Weed"></option>
+    <option value="Rumblebee"></option>
+    <option value="Hipponimbus"></option>
+    <option value="Rorq'n Roll"></option>
+    <option value="Mimic"></option>
+</datalist>
+</body>
+</html>

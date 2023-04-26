@@ -2,6 +2,7 @@
     "treasure":[
         {
             "area": "Napple Town",
+            "type":"event",
             "description": "Prologue Items",
             "contents": [
                 {
@@ -20,6 +21,7 @@
         },
         {
             "area": "Napple Town",
+            "type":"event",
             "description": "Prologue, from Mele",
             "contents": [
                 {
@@ -34,6 +36,7 @@
         },
         {
             "area": "Napple Town",
+            "type":"chest",
             "description": "Chest outside of Alice's house",
             "contents": [
                 {
@@ -44,6 +47,7 @@
         },
         {
             "area": "Napple Town",
+            "type":"chest",
             "description": "Chest in chapel",
             "contents": [
                 {
@@ -54,6 +58,7 @@
         },
         {
             "area": "Napple Town",
+            "type":"chest",
             "description": "Chest in Mayor Frogcar's house",
             "contents": [
                 {
@@ -64,7 +69,9 @@
         },
         {
             "area": "New Year's Day",
-            "description": "First enemy in level",
+            "type": "enemy",
+            "enemy": "Sock Bunny",
+            "description": "First Sock Bunny in level",
             "contents": [
                 {
                     "type":"item",
@@ -74,6 +81,7 @@
         },
         {
             "area": "New Year's Day",
+            "type":"chest",
             "description": "Chest on small ledge at start of level",
             "contents": [
                 {
@@ -84,6 +92,7 @@
         },
         {
             "area": "New Year's Day",
+            "type":"chest",
             "description": "Chest on tall hill above ledge",
             "contents": [
                 {
@@ -93,6 +102,7 @@
         },
         {
             "area": "New Year's Day",
+            "type":"chest",
             "description": "Chest between hill and log",
             "contents": [
                 {
@@ -102,6 +112,7 @@
         },
         {
             "area": "New Year's Day",
+            "type":"chest",
             "description": "Chest between hill and log",
             "contents": [
                 {
@@ -111,7 +122,9 @@
         },
         {
             "area": "New Year's Day",
-            "description": "First enemy in icy cave",
+            "type":"enemy",
+            "enemy":"Scootonian",
+            "description": "First Scootonian in icy cave",
             "contents": [
                 {
                     "type":"item",
@@ -121,6 +134,7 @@
         },
         {
             "area": "New Year's Day",
+            "type":"chest",
             "description": "Blue chest in cave",
             "contents": [
                 {
@@ -131,6 +145,7 @@
         },
         {
             "area": "New Year's Day",
+            "type":"chest",
             "description": "Second chest in cave",
             "contents": [
                 {
@@ -140,6 +155,7 @@
         },
         {
             "area": "New Year's Day",
+            "type":"chest",
             "description": "Ledge with leaf steps",
             "contents": [
                 {
@@ -149,6 +165,8 @@
         },
         {
             "area": "New Year's Day",
+            "type": "enemy",
+            "enemy": "Sock Bunny",
             "description": "Enemy on ledge over ice spikes",
             "contents": [
                 {
@@ -159,6 +177,7 @@
         },
         {
             "area": "New Year's Day",
+            "type": "chest",
             "description": "Chest encased in ice over ice spikes",
             "contents": [
                 {
@@ -168,6 +187,7 @@
         },
         {
             "area": "New Year's Day",
+            "type": "chest",
             "description": "Chest on leaf outside Spring Alice's house",
             "contents": [
                 {
@@ -177,6 +197,8 @@
         },
         {
             "area": "New Year's Day",
+            "type": "enemy",
+            "enemy": "Sock Bunny",
             "description": "Bottom enemy in front of six leaf steps",
             "contents": [
                 {
@@ -187,16 +209,7 @@
         },
         {
             "area": "New Year's Day",
-            "description": "Bottom enemy in front of six leaf steps",
-            "contents": [
-                {
-                    "type":"item",
-                    "name":"necklace"
-                }
-            ]
-        },
-        {
-            "area": "New Year's Day",
+            "type": "chest",
             "description": "On top of the highest of the six leaf steps",
             "contents": [
                 {
@@ -207,6 +220,8 @@
         },
         {
             "area": "New Year's Day",
+            "type": "enemy",
+            "enemy": "Sock Bunny",
             "description": "Lower of two enemies between moving platforms",
             "contents": [
                 {
@@ -217,7 +232,9 @@
         },
         {
             "area": "New Year's Day",
-            "description": "Second cloud enemy in Auld Lang Falls",
+            "type": "enemy",
+            "enemy": "Hipponimbus",
+            "description": "Second Hipponimbus in Auld Lang Falls",
             "contents": [
                 {
                     "type":"item",
@@ -227,6 +244,7 @@
         },
         {
             "area": "New Year's Day",
+            "type": "chest",
             "description": "Chest at top of Auld Lang Falls",
             "contents": [
                 {
@@ -236,6 +254,7 @@
         },
         {
             "area": "New Year's Day",
+            "type": "chest",
             "description": "Chest on ledge past chest at top of Auld Lang Falls",
             "contents": [
                 {
@@ -245,6 +264,7 @@
         },
         {
             "area": "New Year's Day",
+            "type": "chest",
             "description": "Chest halfway down Auld Lang Falls on right",
             "contents": [
                 {
@@ -254,6 +274,7 @@
         },
         {
             "area": "New Year's Day",
+            "type": "chest",
             "description": "Chest halfway down Auld Lang Falls on left below mimic",
             "contents": [
                 {
@@ -264,6 +285,7 @@
         },
         {
             "area": "New Year's Day",
+            "type": "chest",
             "description": "Chest at bottom left of Auld Lang Falls",
             "contents": [
                 {
@@ -274,6 +296,7 @@
         },
         {
             "area": "New Year's Day",
+            "type": "chest",
             "description": "Under arch",
             "contents": [
                 {
@@ -284,7 +307,9 @@
         },
         {
             "area": "New Year's Day",
-            "description": "Second scooter enemy above arch",
+            "type": "enemy",
+            "enemy":"Scootonian",
+            "description": "Second Scootonian above arch",
             "contents": [
                 {
                     "type":"item",
@@ -294,7 +319,9 @@
         },
         {
             "area": "New Year's Day",
-            "description": "Bottom shooter enemy before third cliff-step",
+            "type": "enemy",
+            "enemy":"Blast Flower",
+            "description": "Bottom Blast Flower before third cliff-step",
             "contents": [
                 {
                     "type":"item",
@@ -304,6 +331,7 @@
         },
         {
             "area": "New Year's Day",
+            "type": "chest",
             "description": "Chest on top of third cliff-step at end of level",
             "contents": [
                 {
@@ -314,6 +342,7 @@
         },
         {
             "area": "Napple Town",
+            "type": "event",
             "description": "Minister Druid gift after completing New Year's Day",
             "contents": [
                 {
@@ -336,6 +365,7 @@
         },
         {
             "area": "Napple Town",
+            "type": "event",
             "description": "Enter Porch's room after completing New Year's Day",
             "contents": [
                 {
@@ -345,7 +375,8 @@
             ]
         },
         {
-            "area": "Napple Town",
+            "area": "Napple Town",   
+            "type": "chest",
             "description": "Leap Academy",
             "contents": [
                 {

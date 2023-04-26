@@ -1,0 +1,38 @@
+.json-output {
+    float: right;
+    width: 20%;
+    position: sticky;
+    right: 0px;
+    top: 0px;
+    display:flex;
+    flex-direction: column;
+    align-content: stretch;
+    height: 100vh;
+}
+
+.json-output > * {
+    width: 100%;
+}
+
+.json-output > textarea {
+    overflow: auto;
+    overflow-y: scroll;
+    white-space: pre;
+    font-family: monospace;
+    font-size: .75em;
+}
+
+textarea {
+    flex-grow:100;
+}
+
+button:focus{
+    background-color: aquamarine;
+}
+
+input[type=text]{
+    width:10em;
+}
+input[type=text].wider {
+    width:25em;
+}
