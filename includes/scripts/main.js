@@ -109,17 +109,17 @@ $(async () => {
     const BORDER_SIZE = 4;
     const panel = $(".journal-col");
 
-    let m_pos;
+    document.m_pos;
     function resize(e){
-        const dx = m_pos - e.x;
-        m_pos = e.x;
-        panel.width((panel.width() + dx) + "px");
+        const dx = document.m_pos - e.clientX;
+        document.m_pos = e.clientX;
+        $(".journal-col").width($(".journal-col").width() + dx);
     }
 
     panel.on("mousedown", function(e){
     if (e.offsetX < BORDER_SIZE) {
-        m_pos = e.x;
-        $(document).off("mousemove", resize);
+        document.m_pos = e.x;
+        $(document).on("mousemove", resize);
     }});
 
     $(document).on("mouseup", function(){

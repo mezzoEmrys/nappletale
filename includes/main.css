@@ -31,12 +31,12 @@ body {
 }
 
 .journal-col {
-  width: 35vw;
-  min-width: 30em;
+  min-width: 10em;
   max-width: 50vw;
   background-color: #ffcdbc;
   display: flex;
   overflow-y: scroll;
+  flex-shrink: 0;
 }
 .journal-col::before {
   content: "";
@@ -77,13 +77,22 @@ body {
   background-color: rgba(250, 235, 215, 0.75);
 }
 
-ul.nav-tabs {
-  background-color: #AAF0C1;
+ul.tab-header {
+  display: flex;
+  /* flex-wrap: wrap; */
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
-
-.nav-tabs > .nav-item > .nav-link {
+ul.tab-header .nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
   background-color: rgba(171, 155, 133, 0.75);
   color: var(--bs-nav-tabs-link-active-color) !important;
+}
+
+ul.nav-tabs {
+  background-color: #AAF0C1;
 }
 
 button.nav-link.active {
