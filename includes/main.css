@@ -38,10 +38,9 @@ body {
   display: flex;
   overflow-y: scroll;
 }
-.journal-col::after {
+.journal-col::before {
   content: "";
   background-color: #ccc;
-  position: absolute;
   left: 0;
   width: 4px;
   height: 100%;

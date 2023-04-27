@@ -41,10 +41,9 @@ body {
     display:flex;
     overflow-y: scroll;
     
-    &::after{
+    &::before{
         content: '';
         background-color: #ccc;
-        position: absolute;
         left: 0;
         width: 4px;
         height: 100%;
