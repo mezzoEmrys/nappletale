@@ -1,0 +1,35 @@
+268E 4825
+8c29 4970
+
+2593 4855 (necklaces)
+
+start 25850000
+stop 29850000
+
+base reference
+
+25AE 4972
+
+paffet counts 
+
+262E 175C - in-stage	
+264C 7458 - in-stage REAL
+264F DAAB - in-town
+
+paffet slot 1?
+
+25A0 9D14
+25A0 9D18
+25A0 9D1C
+
+25BA 444C
+25BA 444D
+25BA 4450
+25BA 4451
+
+262E 1746
+262E 1747
+262E 175C
+
+264F DA8C
+264F DA91
