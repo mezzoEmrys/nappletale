@@ -90,16 +90,16 @@
           </button>
         </li>
       </ul>
-<!-- Paffet panel -->
       <div class="tab-content flex-grow-1" id="myTabContent">
+<!-- Paffet panel -->
         <div class="listing-pane tab-pane fade show active" id="paffet-tab-pane" role="tabpanel" aria-labelledby="paffet-tab" tabindex="0"> 
           <div class="entry paffet-entry hidden-template" id="paffet-template">
             <button type="button" class="journal-add">+</button>
             <img class="paffet-image">
             <span class="paffet-name"></span>
             <span class="paffet-details"></span>
-            <div class="paffet-recipe ref-container">
-            </div>
+            <div class="paffet-recipe ref-container"></div>
+            <div class="info-link ref-container"><a class="details">View Details...</a></div>
           </div>
         </div>
 <!-- MIS panel -->
@@ -110,6 +110,7 @@
             <span class="mis-name"></span>
             <div class="mis-items ref-container"><span>Comes from:</span></div>
             <div class="mis-paffets ref-container"><span>Used in:</span></div>
+            <div class="info-link ref-container"><a class="details">View Details...</a></div>
           </div>
         </div>
 <!-- Items panel -->
@@ -120,6 +121,7 @@
             <span class="item-name"></span>
             <div class="item-mis ref-container"></div>
             <div class="item-areas ref-container"><span>Found in:</span></div>
+            <div class="info-link ref-container"><a class="details">View Details...</a></div>
           </div>
         </div>
 <!-- Quests panel -->
@@ -141,11 +143,34 @@
         </div>
     </div>
     <div class="journal-col">
-      <div class="textured data">
-        <h3>Journal</h3>
-        <div class="journal-list" id="mis-list"></div>
-        <div class="journal-list" id="paffet-list"></div>
-        <div class="journal-list" id="item-list"></div>
+      <div class="tab-content textured">
+        <ul class="tab-header" id="encyclo" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="journal-tab" data-bs-toggle="tab" data-bs-target="#journal-tab-pane" 
+                    type="button" role="tab" aria-controls="journal-tab-pane" aria-selected="true">
+              <span class="material-icons" title="journal">edit_square</span> 
+              <span class="tab-title">Journal</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="info-tab" data-bs-toggle="tab" data-bs-target="#info-tab-pane" 
+                    type="button" role="tab" aria-controls="info-tab-pane" aria-selected="false">
+              <span class="material-icons" title="info">description</span>
+              <span class="tab-title">Info</span>
+            </button>
+          </li>
+        </ul>
+<!-- Journal panel -->
+        <div class="data tab-pane fade" id="journal-tab-pane" role="tabpanel" aria-labelledby="journal-tab" tabindex="0">
+          <span id="info-explain">Press + on an item to add its details to your journal</span>
+          <div class="journal-list" id="mis-list"></div>
+          <div class="journal-list" id="paffet-list"></div>
+          <div class="journal-list" id="item-list"></div>
+        </div>
+<!-- Info panel -->
+        <div class="listing-pane tab-pane fade" id="info-tab-pane" role="tabpanel" aria-labelledby="info-tab" tabindex="1">
+          info
+        </div>
       </div>
     </div>
   </div>

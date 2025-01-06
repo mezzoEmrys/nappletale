@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CheatTable CheatEngineTableVersion="34">
+<CheatTable CheatEngineTableVersion="45">
   <CheatEntries/>
   <UserdefinedSymbols/>
   <LuaScript>local scan = createMemScan()
-scan.firstScan(soExactValue,vtString,rtTruncated,"Spirit World"," ",0,0xfffffffff, "*W", fsmNotAligned, nil, true, false, false, false)
+scan.firstScan(soExactValue,vtString,rtTruncated,"Spirit World"," ",0,0x00007fffffffffff, "*W", fsmNotAligned, nil, true, false, false, false)
 scan.waitTillDone()
 local flist = createFoundList(scan)
 flist.initialize()

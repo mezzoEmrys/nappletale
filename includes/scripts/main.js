@@ -36,6 +36,8 @@ class countedList {
     }
 
     forEach(fn) { this.list.forEach(fn); }
+
+    count() { return this.list.length; }
 }
 
 class set {
@@ -63,6 +65,8 @@ class set {
     }
 
     forEach(fn) { this.list.forEach(fn); return this;}
+
+    count() { return this.list.length; }
 }
 
 const journal = {
@@ -342,6 +346,12 @@ function reloadJournal(){
     $("#item-list").empty();
     journal.mis.clean();
     journal.item.clean();
+
+    if(journal.mis.count() == 0 && journal.item.count() == 0  && journal.paffet.count() == 0){
+        $("#info-explain").show();
+    } else {
+        $("#info-explain").hide();
+    }
 
     var misList = new countedList();
 
