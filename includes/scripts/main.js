@@ -83,6 +83,10 @@ function idFix(name){
     return name.replaceAll(" ", "_");
 }
 
+function goToBootstrapTab(tabTarget){
+    bootstrap.Tab.getInstance(document.querySelector("#"+tabTarget)).show();
+}
+
 var dataFetched = Promise.allSettled([
     $.get("./data/area.json").then(res => data.area = res.area),
     $.get("./data/item.json").then(res => data.item = res.item),
@@ -131,11 +135,13 @@ $(async () => {
     });
 });
 
+// Cross-panel links
 function bindReferenceElement(element){
     $(element).on("click", (event) => {
         const tabTarget = $(event.currentTarget).attr("data-tab") + "-tab";
         const finalTarget = $(event.currentTarget).attr("href");
-        $("#"+tabTarget).click();
+        goToBootstrapTab(tabTarget);
+        //$("#"+tabTarget).click();
         console.log(finalTarget);
         document.querySelector(finalTarget)
             .scrollIntoView();
@@ -147,19 +153,9 @@ function bindReferenceElement(element){
     });
 }
 
-function bindJAdd(el, list, obj){
-    $(".journal-add", el).on("click", () => {
-        list.add(obj);
-        reloadJournal();
-    });
-}
-
-function bindJRemove(el, list, obj){
-    $(".journal-remove", el).on("click", () => {
-        list.remove(obj);
-        reloadJournal();
-    });
-}
+/**
+ * Page generation
+ */
 
 function referenceMIS(mis){
     var el = $("#mis-ref-template").clone();
@@ -320,6 +316,26 @@ function loadAreaTab(){
 
 }
 
+/**
+ * Journal management
+ */
+
+function bindJAdd(el, list, obj){
+    $(".journal-add", el).on("click", () => {
+        list.add(obj);
+        reloadJournal();
+        goToBootstrapTab("journal-tab");
+    });
+}
+
+function bindJRemove(el, list, obj){
+    $(".journal-remove", el).on("click", () => {
+        list.remove(obj);
+        reloadJournal();
+        goToBootstrapTab("journal-tab");
+    });
+}
+
 function countedRef(refEl, count){
     var el = $("#counter-template").clone();
     el.removeAttr("id");
@@ -384,13 +400,22 @@ function reloadJournal(){
     misList
         .sort((a, b) => data.mis.indexOf(a.obj) - data.mis.indexOf(b.obj))
         .forEach((countedMis) => {
-        var mis = countedMis.obj;
-        var count = countedMis.count;
-        var newEl = countedRef(tooltipRemove(referenceMIS(mis)), count);
-        bindJAdd(newEl, journal.mis, mis);
-        bindJRemove(newEl, journal.mis, mis);
-        $("#mis-list").append(newEl);
-    });
+            var mis = countedMis.obj;
+            var count = countedMis.count;
+            var newEl = countedRef(tooltipRemove(referenceMIS(mis)), count);
+            bindJAdd(newEl, journal.mis, mis);
+            bindJRemove(newEl, journal.mis, mis);
+            $("#mis-list").append(newEl);
+        });
     
+}
 
+/**
+ * Info panel
+ */
+
+
+function bindInfoElement(el){
+
+    goToBootstrapTab("info-tab");
 }
