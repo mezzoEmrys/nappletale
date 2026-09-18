@@ -84,7 +84,7 @@ function idFix(name){
 }
 
 function goToBootstrapTab(tabTarget){
-    bootstrap.Tab.getInstance(document.querySelector("#"+tabTarget)).show();
+    $("#"+tabTarget).click();
 }
 
 var dataFetched = Promise.allSettled([
@@ -352,7 +352,7 @@ function loadAreaTab(){
             $(".area-name", el).html(area.name);
         }
         
-        $("#area-tab-pane").append(el);
+        $("#areas-tab-pane").append(el);
     });
 }
 
