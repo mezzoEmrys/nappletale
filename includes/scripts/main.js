@@ -495,11 +495,11 @@ function bindItemInfo(el, item){
         item.mis.forEach(misName => {
             const image = $("<img>");
             image.attr("src", "images/screenshots/decode/"+item.name+"-"+misName+".png");
-            $(".screenshots").append(image);
+            $(".screenshots", newEl).append(image);
 
             const mis = getFromByName(data.mis, misName);
             const paffets = data.paffet.filter(p => p.mis.includes(misName));
-            $(".item-mis", el).append(tooltipImage(referenceMIS(mis), paffets));
+            $(".item-mis", newEl).append(tooltipImage(referenceMIS(mis), paffets));
         })
 
         $("#info-tab-pane").html(newEl);
