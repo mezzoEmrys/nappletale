@@ -29,7 +29,7 @@
         },
         {
             "name":"dollhouse",
-            "mis":["physical rest", "house", "dreams"],
+            "mis":["physical rest", "house", "dreams", "door"],
             "image":"nt-i06.jpg"
         },
         {
@@ -177,7 +177,7 @@
         },
         {
             "name":"dessert",
-            "mis":["physical rest", "pure", "ice"],
+            "mis":["physical rest", "pure", "ice", "fresh"],
             "image":"nt-i34.jpg"
         },
         {

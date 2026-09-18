@@ -130,6 +130,7 @@
       "season":"summer"
     },
     {
+      "display_name_en": "Gate",
       "name": "door",
       "image": "nt-mis23.jpg",
       "season":"summer"
@@ -207,6 +208,7 @@
       "season":"autumn"
     },
     {
+      "display_name_en": "Intensity",
       "name": "rigor",
       "image": "nt-mis37.jpg",
       "season":"winter"
