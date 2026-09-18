@@ -245,3 +245,8 @@ button.nav-link.active {
 .abs-anchor{
     position: relative;
 }
+
+.screenshots > img {
+    max-width: 100%;
+    height: auto;
+}
