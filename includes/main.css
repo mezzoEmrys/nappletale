@@ -29,60 +29,68 @@ body {
   display: flex;
   flex-direction: column;
 }
+.listing-col > div {
+  background-color: rgba(250, 235, 215, 0.75);
+}
+
+.journal-handle {
+  background-color: #ccc;
+  width: 4px;
+  height: 100%;
+  cursor: ew-resize;
+}
 
 .journal-col {
   min-width: 10em;
   max-width: 50vw;
   background-color: #ffcdbc;
   display: flex;
-  overflow-y: scroll;
   flex-shrink: 0;
 }
-.journal-col::before {
-  content: "";
-  background-color: #ccc;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  cursor: ew-resize;
+.journal-col .tab-content > div {
+  padding: 0.5em;
+  margin-left: 4px;
+}
+
+.tab-content > .listing-pane.active {
+  padding: 0.5em;
+  padding-right: 4px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.tab-content > .vertical-list-pane.active {
+  padding: 0.5em;
+  padding-right: 4px;
+  display: flex;
+  flex-flow: column nowrap;
+  list-style: none;
+}
+.tab-content {
+  overflow-y: scroll;
 }
 
 .journal-expander-col {
   background-color: #ffcdbc;
   display: flex;
 }
-
-.tab-content > .listing-pane.active {
-  padding: 0.5em;
-  padding-right: 40px;
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.tab-content > .vertical-list-pane.active {
-  padding: 0.5em;
-  padding-right: 40px;
-  display: flex;
-  flex-flow: column nowrap;
-  list-style: none;
+.journal-expander-col .journal-expander {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 .textured {
   background-image: url("../images/web-assets/grit.png");
-  opacity: 0.8;
+  background-repeat: repeat;
+  background-blend-mode: lighten;
   flex-grow: 1;
-}
-
-.data {
-  padding: 0.5em;
+  overflow: auto;
 }
 
 .nav-icons {
   float: right;
-}
-
-.listing-col > div {
-  background-color: rgba(250, 235, 215, 0.75);
 }
 
 ul.tab-header {
@@ -110,14 +118,6 @@ button.nav-link.active {
 .page-wrapper {
   height: 100vh;
   max-height: 100vh;
-}
-
-.journal-expander {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  border: none;
 }
 
 #myTabContent {
@@ -206,33 +206,39 @@ button.nav-link.active {
   margin: 1px;
 }
 
-.floating-buttons {
+.abs-anchor {
+  position: relative;
+}
+.abs-anchor .floating-buttons {
   position: absolute;
   z-index: 5;
   right: 0;
 }
-
-.floating-counter {
+.abs-anchor .floating-counter {
   position: absolute;
   z-index: 1;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.5);
   color: green;
 }
-
-.counter-value {
+.abs-anchor .floating-counter .counter-value {
   font-weight: bold;
 }
-
-.negative {
+.abs-anchor .floating-counter .negative {
   color: darkred;
-}
-
-.abs-anchor {
-  position: relative;
 }
 
 .screenshots > img {
   max-width: 100%;
   height: auto;
+}
+
+.vertical-list-pane .vertical-list-row {
+  border-bottom: black 1px solid;
+}
+.vertical-list-pane .vertical-list-header {
+  background-color: rgba(128, 128, 128, 0.5);
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
+  font-size: large;
 }/*# sourceMappingURL=main.css.map */

@@ -116,17 +116,21 @@ $(async () => {
 
     const BORDER_SIZE = 4;
     const panel = $(".journal-col");
+    panel.width(panel.width());
 
+    var m_pos;
     function resize(e){
-        const dx = document.m_pos - e.clientX;
-        document.m_pos = e.clientX;
-        panel.width(panel + dx);
+        const dx = m_pos - e.clientX;
+        m_pos = e.clientX;
+        console.log()
+        panel.width(panel.width() + dx);
     }
 
-    panel.on("mousedown", function(e){
-    if (e.offsetX < BORDER_SIZE) {
-        document.m_pos = e.x;
-        $(document).on("mousemove", resize);
+    $(".journal-handle").on("mousedown", function(e){
+        console.log("fired bind");
+        if (e.offsetX < BORDER_SIZE) {
+            m_pos = e.x;
+            $(document).on("mousemove", resize);
     }});
 
     $(document).on("mouseup", function(){
@@ -139,6 +143,7 @@ function bindReferenceElement(element){
     $(element).on("click", (event) => {
         const tabTarget = $(event.currentTarget).attr("data-tab") + "-tab";
         const finalTarget = $(event.currentTarget).attr("href");
+        console.log(tabTarget);
         goToBootstrapTab(tabTarget);
         //$("#"+tabTarget).click();
         console.log(finalTarget);
@@ -146,7 +151,6 @@ function bindReferenceElement(element){
             .scrollIntoView();
         $(finalTarget).addClass("selected");
         setTimeout(() => {
-            console.log("removing");
             $(finalTarget).removeClass("selected");
         }, 200);
     });
@@ -191,7 +195,7 @@ function referenceArea(area){
     el.removeAttr("id");
     el.removeClass("hidden-template");
     $(".area-name", el).html(area.name);
-    $("a", el).attr("href", "#area-"+idFix(area.name));
+    $("a", el).attr("href", "#areas-"+idFix(area.name));
     bindReferenceElement($("a", el));
     return el;
 }
@@ -335,6 +339,7 @@ function loadQuestTab(){
 
     appendHeader('To-Do entries');
     data.quest.todo.forEach(appendQuest);
+    $("#quests-tab-pane").append($('<div>&nbsp;</div>'));
     appendHeader('Request entries');
     data.quest.requests.forEach(appendQuest);
 }
@@ -342,7 +347,7 @@ function loadQuestTab(){
 function loadAreaTab(){
     data.area.forEach(area => {
         var el = $("#area-template").clone();
-        el.attr("id", "area-"+idFix(area.name));
+        el.attr("id", "areas-"+idFix(area.name));
         el.removeClass("hidden-template");
         if("display_name_en" in area){
             $(".area-name", el).html(area.display_name_en);
@@ -465,6 +470,7 @@ function bindPaffetInfo(el, paffet){
         }
 
         $("#info-tab-pane").html(newEl);
+        $(".journal-col").removeClass("no-display");
         goToBootstrapTab("info-tab");
     });
 }
@@ -481,6 +487,7 @@ function bindMisInfo(el, mis){
         }
 
         $("#info-tab-pane").html(newEl);
+        $(".journal-col").removeClass("no-display");
         goToBootstrapTab("info-tab");
     });
 }
@@ -507,6 +514,7 @@ function bindItemInfo(el, item){
         })
 
         $("#info-tab-pane").html(newEl);
+        $(".journal-col").removeClass("no-display");
         goToBootstrapTab("info-tab");
     });
 }

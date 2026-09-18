@@ -103,10 +103,11 @@ const server = http.createServer((req, res) => {
              req.url.startsWith("/includes/") ||
              req.url.startsWith("/data/") ||
              req.url.startsWith("/tools/")) {
-        if(fs.existsSync("."+req.url)){
-            res.setHeader("Content-Type", mime.lookup("."+req.url));
+        const url = req.url.replace(/%20/g, ' ');
+        if(fs.existsSync("."+url)){
+            res.setHeader("Content-Type", mime.lookup("."+url));
             res.writeHead(200);
-            res.end(fs.readFileSync("."+req.url));
+            res.end(fs.readFileSync("."+url));
         } else {
             res.writeHead(404);
             res.end();

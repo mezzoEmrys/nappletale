@@ -126,7 +126,7 @@
         </div>
 <!-- Quests panel -->
         <div class="vertical-list-pane tab-pane fade" id="quests-tab-pane" role="tabpanel" aria-labelledby="quests-tab" tabindex="0">
-          <div class="vertical-list-row hidden-template" id="quest-header-row">
+          <div class="vertical-list-row vertical-list-header hidden-template" id="quest-header-row">
             <div class="header-row-name"></div>
           </div>
           <div class="vertical-list-row hidden-template" id="quest-template">
@@ -148,6 +148,9 @@
         <div class="textured">
             <button type="button" class="journal-expander">▶</button>
         </div>
+    </div>
+    <div class="journal-handle">
+      &nbsp;
     </div>
     <div class="journal-col">
       <div class="tab-content textured">
@@ -175,8 +178,8 @@
           <div class="journal-list" id="item-list"></div>
         </div>
 <!-- Info panel -->
-        <div class="listing-pane tab-pane fade" id="info-tab-pane" role="tabpanel" aria-labelledby="info-tab" tabindex="1">
-          info
+        <div class="data tab-pane fade" id="info-tab-pane" role="tabpanel" aria-labelledby="info-tab" tabindex="1">
+          View the details of an item in the encyclopedia to view it here
         </div>
       </div>
     </div>
@@ -230,7 +233,7 @@
 
 <div class="hidden-template area-reference" id="area-ref-template">
   <div class="tooltip-holder">
-    <a href="#" class="area-name" data-tab="area"></a>
+    <a href="#" class="area-name" data-tab="areas"></a>
     <div class="tooltip-data"></div>
   </div>
 </div>
