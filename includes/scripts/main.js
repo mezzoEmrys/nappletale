@@ -313,7 +313,7 @@ function loadItemTab(){
 }
 
 function loadQuestTab(){
-    data.quest.forEach(quest => {
+    function appendQuest(quest){
         var el = $("#quest-template").clone();
         el.attr("id", "quest-"+idFix(quest.name));
         el.removeClass("hidden-template");
@@ -325,7 +325,20 @@ function loadQuestTab(){
 
         
         $("#quests-tab-pane").append(el);
-    });
+    }
+    function appendHeader(name){
+        var el = $("#quest-header-row").clone();
+        el.attr("id", "quest-header-"+idFix(name));
+        el.removeClass("hidden-template");
+        $(".header-row-name", el).html(name);
+        
+        $("#quests-tab-pane").append(el);
+    }
+
+    appendHeader('To-Do entries');
+    data.todo.forEach(loadAppendQuest);
+    appendHeader('Request entries');
+    data.requests.forEach(loadAppendQuest);
 }
 
 function loadAreaTab(){
