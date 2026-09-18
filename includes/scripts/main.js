@@ -116,8 +116,6 @@ $(async () => {
 
     const BORDER_SIZE = 4;
     const panel = $(".journal-col");
-    //fix width to default
-    panel.width(panel.width());
 
     function resize(e){
         const dx = document.m_pos - e.clientX;
