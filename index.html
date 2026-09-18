@@ -28,10 +28,7 @@
         <img class="logo" src="images/web-assets/TITLE.gif"> 
         <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav child-spacing nav-icons">
           <li class="nav-item col-auto">
-            <span class="material-icons nav-link">home</span>
-          </li>
-          <li class="nav-item col-auto">
-            <span class="nav-link">Encyclopedia</span> 
+            <a class="nav-link">Encyclopedia</a> 
           </li>
           <li class="nav-item col-auto">
             <span class="nav-link">Bingo</span> 
@@ -39,7 +36,7 @@
           <li class="nav-item col-auto row">
             <label for="search" class="col-form-label col-1"><span class="material-icons">search</span></label>
             <div class="col">
-              <input id="search" type="text" name="search" class="form-control">
+              <input id="search" type="text" name="search" class="form-control" disabled="disabled">
             </div>
           </li>
         </ul>
@@ -92,7 +89,7 @@
       </ul>
       <div class="tab-content flex-grow-1" id="myTabContent">
 <!-- Paffet panel -->
-        <div class="listing-pane tab-pane fade show active" id="paffet-tab-pane" role="tabpanel" aria-labelledby="paffet-tab" tabindex="0"> 
+        <div class="listing-pane tab-pane  show active" id="paffet-tab-pane" role="tabpanel" aria-labelledby="paffet-tab" tabindex="0"> 
           <div class="entry paffet-entry hidden-template" id="paffet-template">
             <button type="button" class="journal-add">+</button>
             <img class="paffet-image">
@@ -103,7 +100,7 @@
           </div>
         </div>
 <!-- MIS panel -->
-        <div class="listing-pane tab-pane fade" id="mis-tab-pane" role="tabpanel" aria-labelledby="mis-tab" tabindex="0">
+        <div class="listing-pane tab-pane " id="mis-tab-pane" role="tabpanel" aria-labelledby="mis-tab" tabindex="0">
           <div class="entry mis-entry hidden-template" id="mis-template">
             <button type="button" class="journal-add">+</button>
             <img class="mis-image">
@@ -114,7 +111,7 @@
           </div>
         </div>
 <!-- Items panel -->
-        <div class="listing-pane tab-pane fade" id="items-tab-pane" role="tabpanel" aria-labelledby="items-tab" tabindex="0">
+        <div class="listing-pane tab-pane " id="items-tab-pane" role="tabpanel" aria-labelledby="items-tab" tabindex="0">
           <div class="entry item-entry hidden-template" id="item-template">
             <button type="button" class="journal-add">+</button>
             <img class="item-image">
@@ -125,7 +122,7 @@
           </div>
         </div>
 <!-- Quests panel -->
-        <div class="vertical-list-pane tab-pane fade" id="quests-tab-pane" role="tabpanel" aria-labelledby="quests-tab" tabindex="0">
+        <div class="vertical-list-pane tab-pane " id="quests-tab-pane" role="tabpanel" aria-labelledby="quests-tab" tabindex="0">
           <div class="vertical-list-row vertical-list-header hidden-template" id="quest-header-row">
             <div class="header-row-name"></div>
           </div>
@@ -134,7 +131,7 @@
           </div>
         </div>
 <!-- Areas panel -->
-        <div class="vertical-list-pane tab-pane fade" id="areas-tab-pane" role="tabpanel" aria-labelledby="areas-tab" tabindex="0">
+        <div class="vertical-list-pane tab-pane " id="areas-tab-pane" role="tabpanel" aria-labelledby="areas-tab" tabindex="0">
           <div class="vertical-list-row hidden-template" id="area-template">
             <div class="row-name area-name"></div>
           </div>
@@ -171,14 +168,14 @@
           </li>
         </ul>
 <!-- Journal panel -->
-        <div class="data tab-pane fade active show" id="journal-tab-pane" role="tabpanel" aria-labelledby="journal-tab" tabindex="0">
+        <div class="data tab-pane  active show" id="journal-tab-pane" role="tabpanel" aria-labelledby="journal-tab" tabindex="0">
           <span id="info-explain">Press + on an item to add its details to your journal</span>
           <div class="journal-list" id="mis-list"></div>
           <div class="journal-list" id="paffet-list"></div>
           <div class="journal-list" id="item-list"></div>
         </div>
 <!-- Info panel -->
-        <div class="data tab-pane fade" id="info-tab-pane" role="tabpanel" aria-labelledby="info-tab" tabindex="1">
+        <div class="data tab-pane " id="info-tab-pane" role="tabpanel" aria-labelledby="info-tab" tabindex="1">
           View the details of an item in the encyclopedia to view it here
         </div>
       </div>
