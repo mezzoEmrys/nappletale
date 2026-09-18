@@ -63,6 +63,14 @@ body {
     flex-flow: row wrap;
 }
 
+.tab-content > .vertical-list-pane.active {
+    padding: .5em;
+    padding-right: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+}
+
 .textured {
     background-image: url("../images/web-assets/grit.png");
     opacity: .8;

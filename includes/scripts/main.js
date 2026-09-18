@@ -116,12 +116,13 @@ $(async () => {
 
     const BORDER_SIZE = 4;
     const panel = $(".journal-col");
+    //fix width to default
+    panel.width(panel.width());
 
-    document.m_pos;
     function resize(e){
         const dx = document.m_pos - e.clientX;
         document.m_pos = e.clientX;
-        $(".journal-col").width($(".journal-col").width() + dx);
+        panel.width(panel + dx);
     }
 
     panel.on("mousedown", function(e){
@@ -249,6 +250,7 @@ function loadPaffetTab(){
             $(".paffet-recipe", el).append(tooltipImage(referenceMIS(mis), items));
         });
         bindJAdd(el, journal.paffet, paffet);
+        bindPaffetInfo(el, paffet);
         $("#paffet-tab-pane").append(el);
     });
 }
@@ -277,6 +279,7 @@ function loadMISTab(){
                 $(".mis-paffets", el).append(tooltipImage(referencePaffet(p), misObjects));
             });
         bindJAdd(el, journal.mis, mis);
+        bindMisInfo(el, mis);
         $("#mis-tab-pane").append(el);
     });
 }
@@ -304,16 +307,40 @@ function loadItemTab(){
                 $(".item-areas", el).append(tooltipImage(referenceArea(area), itemObjects));
             });
         bindJAdd(el, journal.item, item);
+        bindItemInfo(el, item);
         $("#items-tab-pane").append(el);
     });
 }
 
 function loadQuestTab(){
+    data.quest.forEach(quest => {
+        var el = $("#quest-template").clone();
+        el.attr("id", "quest-"+idFix(quest.name));
+        el.removeClass("hidden-template");
+        if("display_name_en" in quest){
+            $(".quest-name", el).html(quest.display_name_en);
+        } else {
+            $(".quest-name", el).html(quest.name);
+        }
 
+        
+        $("#quests-tab-pane").append(el);
+    });
 }
 
 function loadAreaTab(){
-
+    data.area.forEach(area => {
+        var el = $("#area-template").clone();
+        el.attr("id", "area-"+idFix(area.name));
+        el.removeClass("hidden-template");
+        if("display_name_en" in area){
+            $(".area-name", el).html(area.display_name_en);
+        } else {
+            $(".area-name", el).html(area.name);
+        }
+        
+        $("#area-tab-pane").append(el);
+    });
 }
 
 /**
@@ -415,7 +442,24 @@ function reloadJournal(){
  */
 
 
-function bindInfoElement(el){
-
-    goToBootstrapTab("info-tab");
+function bindPaffetInfo(el, paffet){
+    $(".details", el).on("click", () => {
+        //load info page for that thing
+        goToBootstrapTab("info-tab");
+    });
 }
+
+function bindMisInfo(el, mis){
+    $(".details", el).on("click", () => {
+        //load info page for that thing
+        goToBootstrapTab("info-tab");
+    });
+}
+
+function bindItemInfo(el, item){
+    $(".details", el).on("click", () => {
+        //load info page for that thing
+        goToBootstrapTab("info-tab");
+    });
+}
+
