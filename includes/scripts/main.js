@@ -336,9 +336,9 @@ function loadQuestTab(){
     }
 
     appendHeader('To-Do entries');
-    data.todo.forEach(loadAppendQuest);
+    data.quest.todo.forEach(loadAppendQuest);
     appendHeader('Request entries');
-    data.requests.forEach(loadAppendQuest);
+    data.quest.requests.forEach(loadAppendQuest);
 }
 
 function loadAreaTab(){
