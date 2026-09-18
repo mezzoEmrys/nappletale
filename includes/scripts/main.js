@@ -457,21 +457,52 @@ function reloadJournal(){
 
 function bindPaffetInfo(el, paffet){
     $(".details", el).on("click", () => {
-        //load info page for that thing
+        const newEl = $("#paffet-panel-template").clone();
+        if("display_name_en" in paffet){
+            $(".info-title", newEl).html(paffet.display_name_en);
+        } else {
+            $(".info-title", newEl).html(paffet.name);
+        }
+
+        $("#info-tab-pane").html(newEl);
         goToBootstrapTab("info-tab");
     });
 }
 
 function bindMisInfo(el, mis){
     $(".details", el).on("click", () => {
-        //load info page for that thing
+        const newEl = $("#mis-panel-template").clone();
+        if("display_name_en" in mis){
+            $(".info-title", newEl).html(mis.display_name_en);
+        } else {
+            $(".info-title", newEl).html(mis.name);
+        }
+
+        $("#info-tab-pane").html(newEl);
         goToBootstrapTab("info-tab");
     });
 }
 
 function bindItemInfo(el, item){
     $(".details", el).on("click", () => {
-        //load info page for that thing
+        const newEl = $("#item-panel-template").clone();
+        if("display_name_en" in item){
+            $(".info-title", newEl).html(item.display_name_en);
+        } else {
+            $(".info-title", newEl).html(item.name);
+        }
+        
+        item.mis.forEach(mis => {
+            const image = $("<img>");
+            image.attr("src", "images/screenshots/decode/"+item.name+"-"+mis.name+".png");
+            $(".screenshots").append(image);
+
+            const mis = getFromByName(data.mis, misName);
+            const paffets = data.paffet.filter(p => p.mis.includes(mis.name));
+            $(".item-mis", el).append(tooltipImage(referenceMIS(mis), paffets));
+        })
+
+        $("#info-tab-pane").html(newEl);
         goToBootstrapTab("info-tab");
     });
 }
