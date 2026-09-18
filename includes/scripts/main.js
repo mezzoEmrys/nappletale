@@ -492,13 +492,13 @@ function bindItemInfo(el, item){
             $(".info-title", newEl).html(item.name);
         }
         
-        item.mis.forEach(mis => {
+        item.mis.forEach(misname => {
             const image = $("<img>");
-            image.attr("src", "images/screenshots/decode/"+item.name+"-"+mis.name+".png");
+            image.attr("src", "images/screenshots/decode/"+item.name+"-"+misname+".png");
             $(".screenshots").append(image);
 
             const mis = getFromByName(data.mis, misName);
-            const paffets = data.paffet.filter(p => p.mis.includes(mis.name));
+            const paffets = data.paffet.filter(p => p.mis.includes(misname));
             $(".item-mis", el).append(tooltipImage(referenceMIS(mis), paffets));
         })
 
