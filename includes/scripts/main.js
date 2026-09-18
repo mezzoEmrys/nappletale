@@ -458,6 +458,8 @@ function reloadJournal(){
 function bindPaffetInfo(el, paffet){
     $(".details", el).on("click", () => {
         const newEl = $("#paffet-panel-template").clone();
+        newEl.removeAttr("id");
+        newEl.removeClass("hidden-template");
         if("display_name_en" in paffet){
             $(".info-title", newEl).html(paffet.display_name_en);
         } else {
@@ -472,6 +474,8 @@ function bindPaffetInfo(el, paffet){
 function bindMisInfo(el, mis){
     $(".details", el).on("click", () => {
         const newEl = $("#mis-panel-template").clone();
+        newEl.removeAttr("id");
+        newEl.removeClass("hidden-template");
         if("display_name_en" in mis){
             $(".info-title", newEl).html(mis.display_name_en);
         } else {
@@ -486,6 +490,8 @@ function bindMisInfo(el, mis){
 function bindItemInfo(el, item){
     $(".details", el).on("click", () => {
         const newEl = $("#item-panel-template").clone();
+        newEl.removeAttr("id");
+        newEl.removeClass("hidden-template");
         if("display_name_en" in item){
             $(".info-title", newEl).html(item.display_name_en);
         } else {
